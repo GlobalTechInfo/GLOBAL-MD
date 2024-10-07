@@ -1,4 +1,4 @@
-let handler = async (m, { conn, text, usedPrefix, command }) => {
+/*let handler = async (m, { conn, text, usedPrefix, command }) => {
   // Sound
   let name = m.pushName || conn.getName(m.sender)
   var vn = 'https://cdn.jsdelivr.net/gh/GlobalTechInfo/GLOBAL-MD@main/assets/qasim2.mp3'
@@ -47,4 +47,4 @@ handler.help = ['alive']
 handler.tags = ['main']
 handler.command = /^(alive)$/i
 
-export default handler
+export default handler*/
