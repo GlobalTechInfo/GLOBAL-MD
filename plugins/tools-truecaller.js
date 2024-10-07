@@ -1,4 +1,3 @@
-/*
 
 import fetch from 'node-fetch'
 
@@ -61,4 +60,4 @@ handler.help = ['true']
 handler.tags = ['tools']
 handler.command = /^(true|caller)$/i
 
-export default handler*/
+export default handler
