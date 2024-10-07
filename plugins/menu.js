@@ -72,7 +72,7 @@ let msg = generateWAMessageFromContent(m.chat, {
           }),
 
           header: proto.Message.InteractiveMessage.Header.create({
-          ...(await prepareWAMessageMedia({ image : { url: 'https://i.imgur.com/WlBJdfh.jpeg'}}, { upload: conn.waUploadToServer})), 
+          ...(await prepareWAMessageMedia({ image : { url: 'https://imgur.com/a/6YsgX5v'}}, { upload: conn.waUploadToServer})), 
             title: null,
             subtitle: null,
             hasMediaAttachment: false
@@ -91,12 +91,14 @@ let msg = generateWAMessageFromContent(m.chat, {
                                 "{\"display_text\":\"LIST MENU \",\"id\":\".menu2\"}"
                  },
                   {
-                  "name": "cta_url",
-                  "buttonParamsJson": "{\"display_text\":\"OWNER 🌟\",\"Url\":\"https://t.me/GlobalTechInc\",\"merchant_url\":\"https://t.me/GlobalBotInc\"}"
+                  "name": "quick_reply",
+                  "buttonParamsJson: 
+                      "{\"display_text\":\"OWNER 🌟\",\"Url\":\".owner\"}"
                   },
                   {
                   "name": "cta_url",
-                 "buttonParamsJson": "{\"display_text\":\"BOT REPO\",\"url\":\"https://github.com/GlobalTechInfo/GLOBAL-MD\",\"merchant_url\":\"https://github.com/GlobalTechInfo\"}"
+                 "buttonParamsJson": 
+                     "{\"display_text\":\"BOT REPO\",\"url\":\"https://github.com/GlobalTechInfo/GLOBAL-MD\",\"merchant_url\":\"https://github.com/GlobalTechInfo\"}"
               }
            ],
           })
@@ -126,7 +128,7 @@ function clockString(ms) {
 
     function ucapan() {
       const time = moment.tz('Asia/Karachi').format('HH')
-      let res = "happy early in the day☀️"
+      let res = "Happy early in the morning ☀️"
       if (time >= 4) {
         res = "Good Morning 🥱"
       }
