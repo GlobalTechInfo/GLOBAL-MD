@@ -45,8 +45,8 @@ let greeting = ucapan()
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 
 let str = `┏━『 *GLOBAL-MD* 』━◧
-┣⌬ *CREATOR = Qasim*
-┣⌬ *PLUGINS = 988+✅*
+┣⌬ *CREATOR = QASIM*
+┣⌬ *PLUGINS = 300+✅*
 ┗━━━━━━━━━━━━━━━◧
 
 © 2024 *GlobalTechInfo*`
@@ -93,7 +93,7 @@ let msg = generateWAMessageFromContent(m.chat, {
                   {
                   "name": "quick_reply",
                   "buttonParamsJson: 
-                      "{\"display_text\":\"OWNER 🌟\",\"Url\":\".owner\"}"
+                      "{\"display_text\":\"OWNER 🌟\",\"id\":\".owner\"}"
                   },
                   {
                   "name": "cta_url",
