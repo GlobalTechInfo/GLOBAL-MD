@@ -37,29 +37,20 @@ let quote = quotes[Math.floor(Math.random() * quotes.length)];
 
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `
-🚀 *_Buckle up ${name}, ${greeting}! We're going on an adventure!_* 🚀
-
 📜 *_Quote of the day: ${quote}_* 📜
 
-┏━『 *User Info* 』━◧
+┏━『 *User Info* 』━❍
 ┣⌬ *User Tag:* ${taguser}
 ┣⌬ *Name:* ${name}
 ┣⌬ *Time:* ${wib}
 ┣⌬ *Date:* ${date}
-┗━━━━━━━━━━━━━━◧
-┏━『 *Bot Status* 』━◧
+┗━━━━━━━━━━━━━━❍
+┏━『 *Bot Status* 』━❍
 ┣⌬ *Bot Name:* ${botname} 
 ┣⌬ *Prefix:* ${usedPrefix}
 ┣⌬ *Uptime:* ${uptime}
-┣⌬ *Users:* ${totaluser}
-┗━━━━━━━━━━━━━━◧
-
-乂───『 *INFO*』───乂 
-│ *List Menu*
-╰───────❍
-
-┏━━⟪ *LIST MENU* ⟫━━⦿
-
+┗━━━━━━━━━━━━━━❍
+┏━━『 *List Menu* 』━❍
 ┃ ✗ AI Menu
 ┃ ✗ Anime Menu
 ┃ ✗ Audio Menu
@@ -79,8 +70,7 @@ let str = `
 ┃ ✗ Sticker Menu
 ┃ ✗ Tools Menu
 ┃ ✗ Nsfw Menu
-
-┗━━━━━━━━━━━━━━⦿
+┗━━━━━━━━━━━━━━❍
 
 © GlobalTechInfo
 
