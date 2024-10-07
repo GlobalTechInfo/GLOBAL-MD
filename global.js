@@ -53,7 +53,7 @@ const {
   await import('@whiskeysockets/baileys')
 ).default
 
-import readline from 'readline'
+/*import readline from 'readline'
 
 dotenv.config()
 
@@ -135,7 +135,7 @@ const rl = readline.createInterface({
   output: process.stdout,
 })
 const question = text => new Promise(resolve => rl.question(text, resolve))
-
+*/
 const { CONNECTING } = ws
 const { chain } = lodash
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
@@ -384,7 +384,7 @@ async function connectionUpdate(update) {
 
   if (connection === 'open') {
     const { jid, name } = conn.user
-    const msg = `GLOBAL-MD IS SUCCESSFULY CONNECTED\nPREFIX [ ${prefix} ]\nPLUGINS [ ${plugins} ]\nKEEP USING GLOBAL-MD`
+    const msg = `GLOBAL-MD IS SUCCESSFULY CONNECTED ✅\n\nPREFIX [ ${prefix} ]\n\nINSTALLED PLUGINS [ ${plugins} ]\n\nKEEP USING GLOBAL-MD`
 
     await conn.sendMessage(jid, { text: msg, mentions: [jid] }, { quoted: null })
 
