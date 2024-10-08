@@ -52,9 +52,9 @@ const {
   await import('@whiskeysockets/baileys')
 ).default
 
-/*import readline from 'readline'
+import readline from 'readline'
 
-dotenv.config()
+/*dotenv.config()
 
 async function main() {
   const txt = process.env.SESSION_ID
