@@ -6,7 +6,7 @@ import fs from 'fs'
 import dotenv from 'dotenv'
 dotenv.config()
 
-const ownervb = process.env.OWNERS || "923444844060"
+const ownervb = process.env.OWNERS || "923444844060;Qasim"
 
 
 const ownerlist = ownervb.split(';');
@@ -21,7 +21,10 @@ for (let i = 0; i < ownerlist.length; i += 2) {
     global.owner.push(owner);
 }
 
-//global.pairingNumber = "92xxx_number" //put your bot number here
+
+//global.pairingNumber = "92xxx_number" //♦️ put your bot number here if you wana dorctely pair from terminal ♦️//
+
+global.botNumber = '923051391007'
 
 global.mods = ['923444844060']
 global.prems = ['923444844060']
@@ -72,20 +75,18 @@ global.APIKeys = {
 }
 
 // Sticker WM
-global.botname = process.env.BOTNAME
+global.botname = 'GLOBAL-MD-V3'
 global.premium = 'true'
 global.packname = 'GLOBAL BOT'
 global.author = 'GlobalTechInfo'
-global.menuvid = ''
-global.igfg = ''
-global.dygp = ''
+global.igfg = 'https://instagram.com/global.techinc'
 global.fgsc = 'https://github.com/GlobalTechInfo/GLOBAL-MD'
 global.fgyt = 'https://youtube.com/@GlobalTechInfo'
 global.fgpyp = 'https://youtube.com/@GlobalTechInfo'
-global.fglog = ''
+global.fglog = 'https://i.ibb.co/GVS5Dy9/Ephoto360-com-167054c3328030-2.jpg'
 global.thumb = fs.readFileSync('./assets/qasim.jpg')
 
-global.wait = '*........*'
+global.wait = '*Loading........*'
 global.rwait = '⌛'
 global.dmoji = '🤭'
 global.done = '✅'
