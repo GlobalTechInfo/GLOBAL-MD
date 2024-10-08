@@ -22,7 +22,7 @@ for (let i = 0; i < ownerlist.length; i += 2) {
 }
 
 
-//global.pairingNumber = "92xxx_number" //♦️ put your bot number here if you wana dorctely pair from terminal ♦️//
+//global.pairingNumber = "92xxx_number" //put your bot number here
 
 global.botNumber = '923051391007'
 
