@@ -41,12 +41,39 @@ const PORT = process.env.PORT || process.env.SERVER_PORT || 5000
 protoType()
 serialize()
 
-global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) } 
-
-global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
+global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') {
+  return rmPrefix
+    ? /file:\/\/\//.test(pathURL)
+      ? fileURLToPath(pathURL)
+      : pathURL
+    : pathToFileURL(pathURL).toString()
+}
+global.__dirname = function dirname(pathURL) {
+  return path.dirname(global.__filename(pathURL, true))
+}
+global.__require = function require(dir = import.meta.url) {
+  return createRequire(dir)
+}
+global.gurubot = 'https://www.guruapi.tech/api'
 // global.Fn = function functionCallBack(fn, ...args) { return fn.call(global.conn, ...args) }
+global.API = (name, path = '/', query = {}, apikeyqueryname) =>
+  (name in global.APIs ? global.APIs[name] : name) +
+  path +
+  (query || apikeyqueryname
+    ? '?' +
+      new URLSearchParams(
+        Object.entries({
+          ...query,
+          ...(apikeyqueryname
+            ? {
+                [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name],
+              }
+            : {}),
+        })
+      )
+    : '')
 global.timestamp = {
-  start: new Date
+  start: new Date(),
 }
 
 const __dirname = global.__dirname(import.meta.url)
