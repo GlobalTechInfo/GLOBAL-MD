@@ -44,10 +44,16 @@ let readMore = more.repeat(850)
 let greeting = ucapan()
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 
-let str = `┏━『 *GLOBAL-MD* 』━◧
-┣⌬ *CREATOR = QASIM*
-┣⌬ *PLUGINS = 300+✅*
-┗━━━━━━━━━━━━━━━◧
+let str = `
+  『 *GLOBAL-MD* 』  
+
+╔┈┈┈┈┈┈┈┈┈┈┈┈┈
+╎❒ *CREATOR : QASIM*
+╎
+╎❒ *PLUGINS : 250 +*
+╎
+╎❒ *FEATURE : 700 +*
+╚┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 © 2024 *GlobalTechInfo*`
 
@@ -72,7 +78,7 @@ let msg = generateWAMessageFromContent(m.chat, {
           }),
 
           header: proto.Message.InteractiveMessage.Header.create({
-          ...(await prepareWAMessageMedia({ image : { url: 'https://imgur.com/a/6YsgX5v'}}, { upload: conn.waUploadToServer})), 
+          ...(await prepareWAMessageMedia({ image : { url: 'https://i.ibb.co/GVS5Dy9/Ephoto360-com-167054c3328030-2.jpg'}}, { upload: conn.waUploadToServer})), 
             title: null,
             subtitle: null,
             hasMediaAttachment: false
