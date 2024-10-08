@@ -12,7 +12,7 @@ let m2 = `
 ▢ Dont be Sad
 └──────────────
 `
-    let pp = './assests/qasim.jpg' 
+    let pp = './assets/qasim.jpg' 
     conn.sendButton(m.chat, m2, mssg.ig, pp, [
       ['⏍ Info', `${usedPrefix}botinfo`],
       ['⌬ Grupos', `${usedPrefix}grp`]
