@@ -285,7 +285,9 @@ async function filesInit() {
     }
   }
 }
-filesInit().then(_ => console.log(Object.keys(global.plugins))).catch(console.error)
+filesInit()
+  .then(_ => Object.keys(global.plugins))
+  .catch(console.error)
 
 global.reload = async (_ev, filename) => {
   if (pluginFilter(filename)) {
