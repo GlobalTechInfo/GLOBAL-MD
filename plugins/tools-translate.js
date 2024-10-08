@@ -1,4 +1,4 @@
-/*import { translate } from '@vitalets/google-translate-api'
+import { translate } from '@vitalets/google-translate-api'
 const defaultLang = 'en'
 const tld = 'cn'
 
@@ -33,4 +33,4 @@ handler.help = ['translate <lang> <text>']
 handler.tags = ['tools']
 handler.command = ['translate', 'tl', 'trad', 'tr']
 
-export default handler*/
+export default handler
