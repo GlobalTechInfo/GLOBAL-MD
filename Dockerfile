@@ -1,11 +1,20 @@
-FROM quay.io/gurusensei/gurubhay:latest
 
-RUN git clone https://github.com/GlobalTechInfo/GLOBAL-MD /root/global
+FROM node:lts-buster
 
-WORKDIR /root/global/
+RUN apt-get update && \
+  apt-get install -y \
+  ffmpeg \
+  imagemagick \
+  webp && \
+  apt-get upgrade -y && \
+  rm -rf /var/lib/apt/lists/*
 
-RUN npm install --platform=linuxmusl
+COPY package.json .
+
+RUN npm install && npm install qrcode-terminal
+
+COPY . .
 
 EXPOSE 5000
 
-CMD ["npm", "start"]
+CMD ["node", "index.js"]
