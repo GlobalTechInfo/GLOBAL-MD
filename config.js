@@ -7,11 +7,11 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 
-global.owner = [
-  ['923444844060', 'Qasim', true]
+global.owner = ['923444844060', 'Qasim', true]
 
-//global.pairingNumber = "92xxx_number" //♦️ put your number here if you wana dorctely pair from terminal ♦️//
-  global.botNumber = '923051391007' //♦️ If Already Paired Then Replace Your Number Here ♦️//
+//global.pairingNumber = "92xxx_number" //♦️ put your bot number here if you wana dorctely pair from terminal ♦️//
+  
+global.botNumber = '923051391007'
 
 
 global.mods = ['923444844060']
