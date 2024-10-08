@@ -38,40 +38,43 @@ let quote = quotes[Math.floor(Math.random() * quotes.length)];
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `
 📜 *_Quote of the day: ${quote}_* 📜
-
-┏━『 *User Info* 』━❍
-┣⌬ *User Tag:* ${taguser}
-┣⌬ *Name:* ${name}
-┣⌬ *Time:* ${wib}
-┣⌬ *Date:* ${date}
-┗━━━━━━━━━━━━━━❍
-┏━『 *Bot Status* 』━❍
-┣⌬ *Bot Name:* ${botname} 
-┣⌬ *Prefix:* ${usedPrefix}
-┣⌬ *Uptime:* ${uptime}
-┗━━━━━━━━━━━━━━❍
-┏━━『 *List Menu* 』━❍
-┃ ✗ AI Menu
-┃ ✗ Anime Menu
-┃ ✗ Audio Menu
-┃ ✗ Bot Menu
-┃ ✗ Download Menu
-┃ ✗ Economy Menu
-┃ ✗ Fun Menu
-┃ ✗ Game Menu
-┃ ✗ Group Menu
-┃ ✗ Logo Menu
-┃ ✗ News Menu
-┃ ✗ Maker Menu
-┃ ✗ Owner Menu
-┃ ✗ Plugin Menu
-┃ ✗ Reaction Menu
-┃ ✗ Religion Menu
-┃ ✗ Sticker Menu
-┃ ✗ Tools Menu
-┃ ✗ Nsfw Menu
-┗━━━━━━━━━━━━━━❍
-
+╔┈┈┈┈┈┈┈┈┈┈┈┈┈
+╎     *｢ _INFO BOT_ 」*
+╚┈┈┈┈┈┈┈┈┈┈┈┈┈
+╔┈┈┈┈┈┈┈┈┈┈┈┈┈
+╎❒ *Name:* ${name}
+╎❒ *Time:* ${wib}
+╎❒ *Date:* ${date}
+╚┈┈┈┈┈┈┈┈┈┈┈┈┈
+╔┈┈┈┈┈┈┈┈┈┈┈┈┈
+╎❒ *Bot:* ${botname}
+╎❒ *Prefix:* ｢ ${usedPrefix} 」
+╎❒ *Uptime:* ${uptime}
+╚┈┈┈┈┈┈┈┈┈┈┈┈┈
+╔┈┈┈┈┈┈┈┈┈┈┈┈┈
+╎┏━━『 *List Menu* 』
+╎┃ ❒ .economymenu
+╎┃ ❒ .reactionmenu
+╎┃ ❒ .stickermenu
+╎┃ ❒ .groupmenu
+╎┃ ❒ .animemenu
+╎┃ ❒ .logomenu
+╎┃ ❒ .nsfwmenu
+╎┃ ❒ .toolmenu
+╎┃ ❒ .ownermenu
+╎┃ ❒ .makermenu
+╎┃ ❒ .newsmenu
+╎┃ ❒ .makermenu
+╎┃ ❒ .botmenu
+╎┃ ❒ .funmenu
+╎┃ ❒ .gamemenu
+╎┃ ❒ .dlmenu
+╎┃ ❒ .aimenu
+╎┃ ❒ .help2
+╎┃ ❒ .list
+╎┃ ❒ .menu
+╎┗━━━━━━━━━━━
+╚┈┈┈┈┈┈┈┈┈┈┈┈┈
 © GlobalTechInfo
 
 > 💡 *_Remember, when in doubt, use ${usedPrefix}list or ${usedPrefix}help2. It's like my magic spell book!_* 💡
