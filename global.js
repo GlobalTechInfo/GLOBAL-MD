@@ -339,9 +339,9 @@ function runCleanup() {
     })
 }
 
-/*runCleanup()
+runCleanup()
 
-function clearsession() {
+/*function clearsession() {
   let prekey = []
   const directorio = readdirSync('./session')
   const filesFolderPreKeys = directorio.filter(file => {
