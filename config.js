@@ -85,7 +85,7 @@ global.fgpyp = 'https://youtube.com/@GlobalTechInfo'
 global.fglog = ''
 global.thumb = fs.readFileSync('./assets/qasim.jpg')
 
-global.wait = '*........*'
+global.wait = '*Loading........*'
 global.rwait = '⌛'
 global.dmoji = '🤭'
 global.done = '✅'
