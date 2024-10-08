@@ -474,23 +474,25 @@ global.reloadHandler = async function (restatConn) {
   return true
 }
 
-const pluginFolder = global.__dirname(join(__dirname, './plugins/index'))
-const pluginFilter = filename => /\.js$/.test(filename)
-global.plugins = {}
+const pluginFolder = join(fileURLToPath(import.meta.url), './plugins');
+const pluginFilter = filename => /\.js$/.test(filename);
+global.plugins = {};
+
 async function filesInit() {
   for (const filename of readdirSync(pluginFolder).filter(pluginFilter)) {
     try {
-      const file = global.__filename(join(pluginFolder, filename))
-      const module = await import(file)
-      global.plugins[filename] = module.default || module
+      const file = pathToFileURL(join(pluginFolder, filename)).href;
+      const module = await import(file);
+      global.plugins[filename] = module.default || module;
     } catch (e) {
-      conn.logger.error(e)
-      delete global.plugins[filename]
+      console.error(e);
+      delete global.plugins[filename];
     }
   }
 }
+
 filesInit()
-  .then(_ => Object.keys(global.plugins))
+  .then(() => console.log(Object.keys(global.plugins)))
   .catch(console.error)
 
 global.reload = async (_ev, filename) => {
