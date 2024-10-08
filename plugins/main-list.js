@@ -16,7 +16,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   switch (command) {
     case 'list':
       lkr =
-        '*Get ready for the ride, here are your ticket options:*\n\n' +
+        '*Project Has Some Hidden Commands Too,But Choose From Given:*\n\n' +
         '🌅 *' +
         usedPrefix +
         "botmenu* - The Bot's secret control panel.\n\n" +
@@ -47,12 +47,15 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         '🧲 *' +
         usedPrefix +
         'logomenu* - Create a logo that screams You.\n\n' +
-        '💃*' +
+        '💃 *' +
         usedPrefix +
         "nsfwmenu* - The After Dark menu.\n\n"+
-        '🌀*' +
+        '🌀 *' +
         usedPrefix +
-        'aimenu* - Your Personal Artificial Intelligence Copilots.'
+        'aimenu* - Your Personal Artificial Intelligence Copilots.\n\n'+
+        '🥰 *' +
+        usedPrefix +
+        "animemenu* - Pick If You Like Buddy."
       break
 
     case 'botmenu':
