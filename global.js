@@ -109,7 +109,7 @@ async function gandu() {
   }
 }
 
-gandu()
+gandu() */
 
 const pairingCode = !!global.pairingNumber || process.argv.includes('--pairing-code')
 const useQr = process.argv.includes('--qr')
@@ -134,7 +134,7 @@ const rl = readline.createInterface({
   output: process.stdout,
 })
 const question = text => new Promise(resolve => rl.question(text, resolve))
-*/
+
 const { CONNECTING } = ws
 const { chain } = lodash
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
