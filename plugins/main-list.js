@@ -49,7 +49,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         'logomenu* - Create a logo that screams You.\n\n' +
         '💃*' +
         usedPrefix +
-        'nsfwmenu* - The After Dark menu.\n\n'+
+        "nsfwmenu* - The After Dark menu.\n\n"+
         '🌀*' +
         usedPrefix +
         'aimenu* - Your Personal Artificial Intelligence Copilots.'
