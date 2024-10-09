@@ -38,9 +38,8 @@ let quote = quotes[Math.floor(Math.random() * quotes.length)];
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `
 📜 *_Quote of the day: ${quote}_* 📜
-╔┈┈┈┈┈┈┈┈┈┈┈┈┈
-╎     *｢ _INFO BOT_ 」*
-╚┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+
 ╔┈┈┈┈┈┈┈┈┈┈┈┈┈
 ╎❒ *Name:* ${name}
 ╎❒ *Time:* ${wib}
@@ -54,7 +53,7 @@ let str = `
 ╔┈┈┈┈┈┈┈┈┈┈┈┈┈
 ╎┏━━『 *List Menu* 』
 ╎┃ ❒ .economymenu
-╎┃ ❒ .reactionmenu
+╎┃ ❒ .setprivacy
 ╎┃ ❒ .stickermenu
 ╎┃ ❒ .groupmenu
 ╎┃ ❒ .animemenu
@@ -63,14 +62,13 @@ let str = `
 ╎┃ ❒ .toolmenu
 ╎┃ ❒ .ownermenu
 ╎┃ ❒ .makermenu
-╎┃ ❒ .newsmenu
-╎┃ ❒ .makermenu
+╎┃ ❒ .enable
 ╎┃ ❒ .botmenu
 ╎┃ ❒ .funmenu
 ╎┃ ❒ .gamemenu
 ╎┃ ❒ .dlmenu
 ╎┃ ❒ .aimenu
-╎┃ ❒ .help2
+╎┃ ❒ .help
 ╎┃ ❒ .list
 ╎┃ ❒ .menu
 ╎┗━━━━━━━━━━━
