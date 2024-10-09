@@ -17,47 +17,24 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     case 'list':
       lkr =
         '*Get ready for the ride, here are your ticket options:*\n\n' +
-        '🌅 *' +
-        usedPrefix +
-        "botmenu* - The Bot's secret control panel.\n\n" +
-        '🐯 *' +
-        usedPrefix +
-        "ownermenu* - Yep, that's for you, Boss!\n\n" +
-        '🪅 *' +
-        usedPrefix +
-        'groupmenu* - Groups to unite people.\n\n' +
-        '🗂️ *' +
-        usedPrefix +
-        "dlmenu* - 'DL' stands for 'Delicious Loot'.\n\n" +
-        '🎭 *' +
-        usedPrefix +
-        "funmenu* - The bot's party hat. Games, jokes and instant ROFLs.\n\n" +
-        '💰 *' +
-        usedPrefix +
-        'economymenu* - Your personal vault of virtual economy.\n\n' +
-        '🎮 *' +
-        usedPrefix +
-        'gamemenu* - Enter the gaming arena.\n\n' +
-        '🪢 *' +
-        usedPrefix +
-        'stickermenu* - A rainbow of stickers.\n\n' +
-        '🛠️ *' +
-        usedPrefix +
-        "toolmenu* - Your handy-dandy toolkit.\n\n" +
-        '🧲 *' +
-        usedPrefix +
-        'logomenu* - Create a logo that screams You.\n\n' +
-        '💃*' +
-        usedPrefix +
-        "nsfwmenu* - The After Dark menu.\n\n"+
-        '🌀*' +
-        usedPrefix +
-        'aimenu* - Your Personal Artificial Intelligence Copilots.'
+'🌅 *' + usedPrefix + 'botmenu* - The Bot\'s secret control panel.\n\n' +
+'🐯 *' + usedPrefix + 'ownermenu* - Yep, that\'s for you, Boss!\n\n' +
+'🪅 *' + usedPrefix + 'groupmenu* - Groups to unite people.\n\n' +
+'🗂️ *' + usedPrefix + 'dlmenu* - \'DL\' stands for \'Delicious Loot\'.\n\n' +
+'🎭 *' + usedPrefix + 'funmenu* - The bot\'s party hat. Games, jokes and instant ROFLs.\n\n' +
+'💰 *' + usedPrefix + 'economymenu* - Your personal vault of virtual economy.\n\n' +
+'🎮 *' + usedPrefix + 'gamemenu* - Enter the gaming arena.\n\n' +
+'🪢 *' + usedPrefix + 'stickermenu* - A rainbow of stickers.\n\n' +
+'🛠️ *' + usedPrefix + 'toolmenu* - Your handy-dandy toolkit.\n\n' +
+'🧲 *' + usedPrefix + 'logomenu* - Create a logo that screams You.\n\n' +
+'💃 *' + usedPrefix + 'nsfwmenu* - The After Dark menu.\n\n' +
+'🌀 *' + usedPrefix + 'aimenu* - Your Personal Artificial Intelligence Copilots.\n\n' +
+'🫐 *' + usedPrefix + 'animemenu* - Anime fantasies, just a click away.'
       break
 
     case 'botmenu':
       lkr = `
-┌───『 *Bot* 』─❍
+┌───『 *Bot* 』
 ◈ .quran
 ◈ .bible
 ◈ .gita
@@ -85,7 +62,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
       case 'aimenu':
       lkr=`
- ┌───『 *AI* 』─❍
+ ┌───『 *AI* 』
  ◈ .lexica
  ◈ .chatgpt
  ◈ .gitagpt
@@ -101,7 +78,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
  break
     case 'ownermenu':
       lkr = `
-┌───『 *Owner* 』─❍
+┌───『 *Owner* 』
 ◈ .enable
 ◈ .disable
 ◈ .banchat
@@ -116,8 +93,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .resetprefix
 ◈ .getfile
 ◈ .getplugin
-◈ .listplugin
-◈ .installplugin
+◈ .plugins
+◈ .install
 ◈ .savecontact
 ◈ .save
 ◈ .autoreply
@@ -125,8 +102,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .fakereply
 ◈ .delcmd
 ◈ .listcmd
-◈ .enable
-◈ .disable
 ◈ .addprem
 ◈ .delprem
 ◈ .addsudo
@@ -143,12 +118,14 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .setprivacy
 ◈ .unban
 ◈ .ban
+◈ .on
+◈ .off
 ◈ .update
 ╰────────❍` //
       break
     case 'groupmenu':
       lkr = `
-┌───『 *Group* 』─❍
+┌───『 *Group* 』
 ◈ .kick
 ◈ .promote
 ◈ .demote
@@ -176,7 +153,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     case 'downloadermenu':
     case 'dlmenu':
       lkr = `
-┌───『 *Download* 』─❍
+┌───『 *Download* 』
 ◈ .audio
 ◈ .video
 ◈ .play
@@ -205,7 +182,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'economymenu':
       lkr = `
-┌───『 *Economy* 』─❍
+┌───『 *Economy* 』
 ◈ .claim/daily
 ◈ .weekly
 ◈ .monthly
@@ -227,7 +204,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'funmenu':
       lkr = `
-┌───『 *Fun* 』─❍
+┌───『 *Fun* 』
 ◈ .character
 ◈ .truth
 ◈ .dare
@@ -245,7 +222,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'animemenu':
       lkr = `
-┌───『 *Anime* 』─❍
+┌───『 *Anime* 』
 ◈ .waifu
 ◈ .neko
 ◈ .loli
@@ -287,7 +264,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'gamemenu':
       lkr = `
-┌───『 *Game* 』─❍
+┌───『 *Game* 』
 ◈ .tictactoe
 ◈ .delttt
 ◈ .math
@@ -301,7 +278,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'stickermenu':
       lkr = `
-┌───『 *Sticker* 』─❍
+┌───『 *Sticker* 』
 ◈ .sticker
 ◈ .take
 ◈ .scircle
@@ -320,7 +297,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'toolmenu':
       lkr = `
-┌───『 *Tools* 』─❍
+┌───『 *Tools* 』
 ◈ .autosticker
 ◈ .pdf
 ◈ .whatmusic
@@ -356,7 +333,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'nsfwmenu': 
       lkr = `
-  ┌───『 *Nsfw* 』─❍
+  ┌───『 *Nsfw* 』
   ◈ .genshin
   ◈ .swimsuit
   ◈ .schoolswimsuit
@@ -441,7 +418,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'logomenu':
       lkr = `
-  ┌───『 *Maker* 』─❍
+  ┌───『 *Maker* 』
   ◈ .blur
   ◈ .difuminar2
   ◈ .hornycard
@@ -484,6 +461,7 @@ handler.help = [
   'ownermenu',
   'groupmenu',
   'dlmenu',
+  'animemenu'
   'downloadermenu',
   'economymenu',
   'funmenu',
@@ -501,6 +479,7 @@ handler.command = [
   'ownermenu',
   'groupmenu',
   'dlmenu',
+  'animemenu',
   'downloadermenu',
   'economymenu',
   'funmenu',
