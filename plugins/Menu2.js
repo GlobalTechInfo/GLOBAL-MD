@@ -39,9 +39,6 @@ let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `
 📜 *_Quote of the day: ${quote}_* 📜
 ╔┈┈┈┈┈┈┈┈┈┈┈┈┈
-╎     *｢ _INFO BOT_ 」*
-╚┈┈┈┈┈┈┈┈┈┈┈┈┈
-╔┈┈┈┈┈┈┈┈┈┈┈┈┈
 ╎❒ *Name:* ${name}
 ╎❒ *Time:* ${wib}
 ╎❒ *Date:* ${date}
@@ -54,7 +51,7 @@ let str = `
 ╔┈┈┈┈┈┈┈┈┈┈┈┈┈
 ╎┏━━『 *List Menu* 』
 ╎┃ ❒ .economymenu
-╎┃ ❒ .reactionmenu
+╎┃ ❒ .getprivacy
 ╎┃ ❒ .stickermenu
 ╎┃ ❒ .groupmenu
 ╎┃ ❒ .animemenu
@@ -63,7 +60,7 @@ let str = `
 ╎┃ ❒ .toolmenu
 ╎┃ ❒ .ownermenu
 ╎┃ ❒ .makermenu
-╎┃ ❒ .newsmenu
+╎┃ ❒ .enable
 ╎┃ ❒ .makermenu
 ╎┃ ❒ .botmenu
 ╎┃ ❒ .funmenu
