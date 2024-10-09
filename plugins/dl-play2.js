@@ -13,11 +13,11 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
     let searchQuery = keywords.join(" ");
     
     if (!lister.includes(format)) {
-        return conn.reply(m.chat, `*💙 𝙸𝚗𝚐𝚛𝚎𝚜𝚊 𝚎𝚕 𝚏𝚘𝚛𝚖𝚊𝚝𝚘 𝚎𝚗 𝚚𝚞𝚎 𝚍𝚎𝚜𝚎𝚊𝚜 𝚍𝚎𝚜𝚌𝚊𝚛𝚐𝚊𝚛 𝚖á𝚜 𝚎𝚕 𝚝í𝚝𝚞𝚕𝚘 𝚍𝚎 𝚞𝚗 𝚟𝚒𝚍𝚎𝚘 𝚘 𝚖ú𝚜𝚒𝚌𝚊 𝚍𝚎 𝚈𝚘𝚞𝚃𝚞𝚋𝚎.*\n\n𝙴𝚓𝚎𝚖𝚙𝚕𝚘: ${usedPrefix + command} *mp3* Connor RK800 - I Am Machine\n\n𝙵𝚘𝚛𝚖𝚊𝚝𝚘𝚜 𝚍𝚒𝚜𝚙𝚘𝚗𝚒𝚋𝚕𝚎𝚜:\n${lister.map(f => `${usedPrefix + command} *${f}*`).join('\n')}`, m);
+        return conn.reply(m.chat, `*💙 𝘌𝘯𝘵𝘦𝘳 𝘵𝘩𝘦 𝘧𝘰𝘳𝘮𝘢𝘵 𝘪𝘯 𝘸𝘩𝘪𝘤𝘩 𝘺𝘰𝘶 𝘸𝘢𝘯𝘵 𝘵𝘰 𝘥𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘱𝘭𝘶𝘴 𝘵𝘩𝘦 𝘵𝘪𝘵𝘭𝘦 𝘰𝘧 𝘢 𝘠𝘰𝘶𝘛𝘶𝘣𝘦 𝘷𝘪𝘥𝘦𝘰 𝘰𝘳 𝘮𝘶𝘴𝘪𝘤.*\n\n𝘌𝘹𝘢𝘮𝘱𝘭𝘦: ${usedPrefix + command} *mp3* Connor RK800 - I Am Machine\n\n𝘈𝘷𝘢𝘪𝘭𝘢𝘣𝘭𝘦 𝘍𝘰𝘳𝘮𝘢𝘵𝘴:\n${lister.map(f => `${usedPrefix + command} *${f}*`).join('\n')}`, m);
     }
     
     if (!searchQuery) {
-        return conn.reply(m.chat, `*💙 𝙸𝚗𝚐𝚛𝚎𝚜𝚊 𝚎𝚕 𝚝í𝚝𝚞𝚕𝚘 𝚍𝚎 𝚞𝚗 𝚟𝚒𝚍𝚎𝚘 𝚘 𝚖ú𝚜𝚒𝚌𝚊 𝚍𝚎 𝚈𝚘𝚞𝚃𝚞𝚋𝚎.*`, m);
+        return conn.reply(m.chat, `*💙 𝘌𝘯𝘵𝘦𝘳 𝘵𝘩𝘦 𝘵𝘪𝘵𝘭𝘦 𝘰𝘧 𝘢 𝘺𝘰𝘶𝘛𝘶𝘣𝘦 𝘷𝘪𝘥𝘦𝘰 𝘰𝘳 𝘮𝘶𝘴𝘪𝘤.*`, m);
     }
     
     try {
@@ -36,7 +36,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
         txt += `❏ AUTHOR: ${vid.author.name}\n`;
         txt += `❏ PUBLISHED: ${vid.ago}\n`;
         txt += `❏ URL: https://youtu.be/${vid.videoId}\n\n`;
-        txt += `❄ REMEMBER @${m.sender.split('@')[0]}, 𝙲𝚞𝚛𝚒 𝚎𝚜 𝚖𝚒 𝚘𝚠𝚗𝚎𝚛 𝚜𝚒 𝚟𝚊𝚜 𝚊 𝚌𝚊𝚛𝚐𝚊𝚛 𝚕𝚘𝚜 𝚙𝚕𝚞𝚐𝚒𝚗𝚜 𝚍𝚊 𝚌𝚛𝚎𝚍𝚒𝚝𝚘𝚜❄`;
+        txt += `❄ REMEMBER @${m.sender.split('@')[0]}, 𝘘𝘢𝘴𝘪𝘮 𝘪𝘴 𝘮𝘺 𝘰𝘸𝘯𝘦𝘳 𝘪𝘧 𝘺𝘰𝘶 𝘢𝘳𝘦 𝘨𝘰𝘪𝘯𝘨 𝘵𝘰 𝘭𝘰𝘢𝘥 𝘵𝘩𝘦 𝘱𝘭𝘶𝘨𝘪𝘯𝘴 𝘨𝘪𝘷𝘦 𝘤𝘳𝘦𝘥𝘪𝘵𝘴❄`;
 
         
         await conn.sendFile(m.chat, responseImg.data, "thumbnail.jpg", txt, m, null, rcanal);
@@ -47,7 +47,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
             let limit = 100;
             
             if (parseFloat(size.split('MB')[0]) >= limit) {
-                return conn.reply(m.chat, `𝙴𝚕 𝚊𝚛𝚌𝚑𝚒𝚟𝚘 𝚙𝚎𝚜𝚊 𝚖á𝚜 𝚍𝚎 ${limit} 𝙼𝙱, 𝚜𝚎 𝚌𝚊𝚗𝚌𝚎𝚕ó 𝚕𝚊 𝙳𝚎𝚜𝚌𝚊𝚛𝚐𝚊.`, m);
+                return conn.reply(m.chat, `The file weighs more than ${limit} 𝙼𝙱, The download was cancelled.`, m);
             }
             
             await conn.sendFile(m.chat, dl_url, 'yt.mp3', `${vid.title}.mp3`, m);
@@ -59,14 +59,14 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
             let limit = 500;
             
             if (parseFloat(size.split('MB')[0]) >= limit) {
-                return conn.reply(m.chat, `𝙴𝚕 𝚊𝚛𝚌𝚑𝚒𝚟𝚘 𝚙𝚎𝚜𝚊 𝚖á𝚜 𝚍𝚎 ${limit} 𝙼𝙱, 𝚜𝚎 𝚌𝚊𝚗𝚌𝚎𝚕ó 𝚕𝚊 𝙳𝚎𝚜𝚌𝚊𝚛𝚐𝚊.`, m);
+                return conn.reply(m.chat, `The file weighs more than ${limit} 𝙼𝙱, The download was cancelled..`, m);
             }
             
             await conn.sendFile(m.chat, dl_url, 'yt.mp4', `${vid.title}.mp4`, m);
             await m.react('✅');
         }
     } catch (error) {
-        await conn.reply(m.chat, `ɴᴏ ᴇꜱᴛᴀ ɪɴꜱᴛᴀʟᴀᴅᴏ ꜰꜰᴍᴘɢ ᴠᴜᴇʟᴠᴀ ᴀʟ ʀᴇᴘᴏꜱɪᴛᴏʀɪᴏ ᴘᴀʀᴀ ᴄʜᴇᴄᴀʀ ᴄᴏᴍᴏ ɪɴꜱᴛᴀʟᴀʀʟᴏ`, m);
+        await conn.reply(m.chat, `FFMPEG IS NOT INSTALLED`, m);
         console.error(error);
     }
 };
