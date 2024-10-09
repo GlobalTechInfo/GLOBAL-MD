@@ -60,7 +60,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 
     case 'botmenu':
       lkr = `
-┌───『 *Bot* 』─❍
+┌───『 *Bot* 』
 ◈ .quran
 ◈ .bible
 ◈ .gita
@@ -88,7 +88,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
       case 'aimenu':
       lkr=`
- ┌───『 *AI* 』─❍
+ ┌───『 *AI* 』
  ◈ .lexica
  ◈ .chatgpt
  ◈ .gitagpt
@@ -104,7 +104,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
  break
     case 'ownermenu':
       lkr = `
-┌───『 *Owner* 』─❍
+┌───『 *Owner* 』
 ◈ .enable
 ◈ .disable
 ◈ .banchat
@@ -119,8 +119,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .resetprefix
 ◈ .getfile
 ◈ .getplugin
-◈ .listplugin
-◈ .installplugin
+◈ .plugins
+◈ .install
 ◈ .savecontact
 ◈ .save
 ◈ .autoreply
@@ -151,7 +151,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'groupmenu':
       lkr = `
-┌───『 *Group* 』─❍
+┌───『 *Group* 』
 ◈ .kick
 ◈ .promote
 ◈ .demote
@@ -179,7 +179,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     case 'downloadermenu':
     case 'dlmenu':
       lkr = `
-┌───『 *Download* 』─❍
+┌───『 *Download* 』
 ◈ .audio
 ◈ .video
 ◈ .play
@@ -208,7 +208,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'economymenu':
       lkr = `
-┌───『 *Economy* 』─❍
+┌───『 *Economy* 』
 ◈ .claim/daily
 ◈ .weekly
 ◈ .monthly
@@ -230,7 +230,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'funmenu':
       lkr = `
-┌───『 *Fun* 』─❍
+┌───『 *Fun* 』
 ◈ .character
 ◈ .truth
 ◈ .dare
@@ -248,7 +248,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'animemenu':
       lkr = `
-┌───『 *Anime* 』─❍
+┌───『 *Anime* 』
 ◈ .waifu
 ◈ .neko
 ◈ .loli
@@ -290,7 +290,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'gamemenu':
       lkr = `
-┌───『 *Game* 』─❍
+┌───『 *Game* 』
 ◈ .tictactoe
 ◈ .delttt
 ◈ .math
@@ -304,7 +304,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'stickermenu':
       lkr = `
-┌───『 *Sticker* 』─❍
+┌───『 *Sticker* 』
 ◈ .sticker
 ◈ .take
 ◈ .scircle
@@ -323,7 +323,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'toolmenu':
       lkr = `
-┌───『 *Tools* 』─❍
+┌───『 *Tools* 』
 ◈ .autosticker
 ◈ .pdf
 ◈ .whatmusic
@@ -359,7 +359,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'nsfwmenu': 
       lkr = `
-  ┌───『 *Nsfw* 』─❍
+  ┌───『 *Nsfw* 』
   ◈ .genshin
   ◈ .swimsuit
   ◈ .schoolswimsuit
@@ -444,7 +444,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'logomenu':
       lkr = `
-  ┌───『 *Maker* 』─❍
+  ┌───『 *Maker* 』
   ◈ .blur
   ◈ .difuminar2
   ◈ .hornycard
@@ -487,6 +487,7 @@ handler.help = [
   'ownermenu',
   'groupmenu',
   'dlmenu',
+  'animemenu',
   'downloadermenu',
   'economymenu',
   'funmenu',
@@ -504,6 +505,7 @@ handler.command = [
   'ownermenu',
   'groupmenu',
   'dlmenu',
+  'animemenu'
   'downloadermenu',
   'economymenu',
   'funmenu',
