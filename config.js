@@ -25,7 +25,7 @@ for (let i = 0; i < ownerlist.length; i += 2) {
 //global.pairingNumber = "92xxx_number" //put your bot number here
 
 global.botNumber = '923444844060'
-
+global.gurubot = 'https://www.guruapi.tech/api'
 global.mods = ['923444844060']
 global.prems = ['923444844060']
 global.allowed = ['923444844060']
