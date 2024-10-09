@@ -1,20 +1,32 @@
-import fetch from 'node-fetch'
-import displayLoadingScreen from '../lib/loading.js'
+import fetch from 'node-fetch';
+import displayLoadingScreen from '../lib/loading.js';
+
 let handler = async (m, { conn, text }) => {
   if (!text) {
-    console.log('No song name provided.')
-    throw `*Please enter a song name*`
+    console.log('No song name provided.');
+    throw '*Please enter a song name*';
   }
-  m.react('🎶')
-  //await displayLoadingScreen(conn, m.chat)
-  let pp = 'https://wallpapercave.com/wp/wp7932387.jpg'
-  const query = encodeURIComponent(text)
-  let res = `https://api.guruapi.tech/spotifysearch?query=${query}`
-  let spurl = await fetch(res)
-  spurl = await spurl.json()
-  let dlres = await fetch(`https://api.guruapi.tech/spotifydl?url=${spurl.data[0].url}`)
-  dlres = await dlres.json()
-  let sturl  = dlres.data.url
+  
+  m.react('🎶');
+  //await displayLoadingScreen(conn, m.chat);
+  let pp = 'https://wallpapercave.com/wp/wp7932387.jpg';
+  const query = encodeURIComponent(text);
+  let res = `https://api.guruapi.tech/spotifysearch?query=${query}`;
+  let spurl = await fetch(res);
+  spurl = await spurl.json();
+  
+  if (!spurl.data || !spurl.data.length) {
+    throw '*Song not found, please try another name.*';
+  }
+  
+  let dlres = await fetch(`https://api.guruapi.tech/spotifydl?url=${spurl.data[0].url}`);
+  dlres = await dlres.json();
+  
+  if (!dlres.data || !dlres.data.url) {
+    throw '*Unable to download the song. Please try again later.*';
+  }
+
+  let sturl = dlres.data.url;
 
   let doc = {
     audio: {
@@ -24,7 +36,6 @@ let handler = async (m, { conn, text }) => {
     ptt: true,
     waveform: [100, 0, 100, 0, 100, 0, 100],
     fileName: 'Global.mp3',
-
     contextInfo: {
       mentionedJid: [m.sender],
       externalAdReply: {
@@ -36,12 +47,13 @@ let handler = async (m, { conn, text }) => {
         renderLargerThumbnail: false,
       },
     },
-  }
+  };
 
-  await conn.sendMessage(m.chat, doc, { quoted: m })
-}
-handler.help = ['spotify']
-handler.tags = ['downloader']
-handler.command = /^(spotify|song)$/i
+  await conn.sendMessage(m.chat, doc, { quoted: m });
+};
 
-export default handler
+handler.help = ['spotify'];
+handler.tags = ['downloader'];
+handler.command = /^(spotify|song)$/i;
+
+export default handler;
