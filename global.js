@@ -251,7 +251,7 @@ global.reloadHandler = async function (restatConn) {
   }
 
   conn.welcome = 'Hello @user!\n\n🎉 *WELCOME* to the group @group!\n\n📜 Please read the *DESCRIPTION* @desc'
-  conn.bye = 'GOODBYE @user \n\nSee you later!`
+  conn.bye = 'GOODBYE @user \n\nSee you later!'
   conn.spromote = '@user has been promoted to an admin!'
   conn.sdemote = '@user is no longer an admin'
   conn.sDesc = 'The group description has been updated to:\n@desc'
