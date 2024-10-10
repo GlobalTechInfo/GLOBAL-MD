@@ -49,13 +49,16 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         'logomenu* - Create a logo that screams You.\n\n' +
         '💃 *' +
         usedPrefix +
-        "nsfwmenu* - The After Dark menu.\n\n"+
+        "nsfwmenu* - The After Dark menu.\n\n" +
         '🌀 *' +
         usedPrefix +
-        'aimenu* - Your Personal Artificial Intelligence Copilots.\n\n'+
+        'aimenu* - Your Personal Artificial Intelligence Copilots.\n\n' +
         '🥰 *' +
         usedPrefix +
-        "animemenu* - Pick If You Like Buddy."
+        'animemenu* - Pick If You Like Buddy.\n\n +
+        '🎧 *' +
+        usedPrefix +
+        'audiotool* - Wana Edit Audio, Do It Now.'
       break
 
     case 'botmenu':
@@ -113,6 +116,9 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .unbanuser
 ◈ .broadcast
 ◈ .broadcastgc
+◈ .readviewonce
+◈ .setprivacy
+◈ .getprivacy
 ◈ .join
 ◈ .setppbot
 ◈ .setprefix
@@ -122,18 +128,16 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .plugins
 ◈ .install
 ◈ .savecontact
-◈ .save
-◈ .autoreply
-◈ .autobio
 ◈ .fakereply
 ◈ .delcmd
 ◈ .listcmd
-◈ .enable
-◈ .disable
+◈ .getmsg
 ◈ .addprem
 ◈ .delprem
 ◈ .addsudo
 ◈ .delsudo
+◈ .addowner
+◈ .delowner
 ◈ .allvars
 ◈ .broadcast
 ◈ .fullpp
@@ -143,10 +147,13 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .savefile
 ◈ .getfile
 ◈ .logout
-◈ .setprivacy
 ◈ .unban
 ◈ .ban
+◈ .afk
+◈ .save
 ◈ .update
+◈ .allow
+◈ .listban
 ╰────────❍` //
       break
     case 'groupmenu':
@@ -155,7 +162,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .kick
 ◈ .promote
 ◈ .demote
-◈ .infogroup
+◈ .groupinfo
 ◈ .resetlink
 ◈ .antilink
 ◈ .link
@@ -165,41 +172,53 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .setwelcome
 ◈ .setbye
 ◈ .hidetag
+◈ .tagall
+◈ .totag
+◈ .notify
+◈ .delwarn
 ◈ .warn
 ◈ .unwarn
+◈ .warns
+◈ .add
+◈ .delete
 ◈ .group
 ◈ .enable
 ◈ .disable
 ◈ .toxic
 ◈ .ship
 ◈ .register
-◈ .unregister
+◈ .unreg
+◈ .mysn
+◈ .poll
+◈ .simulate
+◈ .admins
 ╰────────❍` //
       break
     case 'downloadermenu':
     case 'dlmenu':
       lkr = `
 ┌───『 *Download* 』
-◈ .audio
 ◈ .video
+◈ .itunes
 ◈ .play
 ◈ .play2
+◈ .play3
 ◈ .apk
 ◈ .mega
 ◈ .song
-◈ .yta 
-◈ .ytv 
+◈ .yts
+◈ .yta
+◈ .ytv
 ◈ .ytmp3 
-◈ .ytmp4 
+◈ .ytmp4
 ◈ .gimage
-◈ .pinterest
-◈ .mediafire 
-◈ .gdrive 
+◈ .mediafire
+◈ .gdrive
 ◈ .gitclone 
-◈ .twitter 
-◈ .tiktok 
-◈ .tiktokstalk
-◈ .instagram 
+◈ .twitter
+◈ .tiktok
+◈ .insta
+◈ .igstalk
 ◈ .spotify
 ◈ .facebook
 ◈ .swdl
@@ -239,6 +258,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .shayeri
 ◈ .ship
 ◈ .waste
+◈ .alexa
 ◈ .simpcard
 ◈ .hornycard
 ◈ .ytcomment
@@ -293,13 +313,14 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ┌───『 *Game* 』
 ◈ .tictactoe
 ◈ .delttt
+◈ .chess
 ◈ .math
-◈ .mathanswer
+◈ .math answer
 ◈ .ppt
 ◈ .slot
 ◈ .casino
-◈ .yourmom
-◈ .terimummy
+◈ .guessflag
+◈ .fhint
 ╰────────❍` //
       break
     case 'stickermenu':
@@ -310,12 +331,14 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .scircle
 ◈ .smaker
 ◈ .sremovebg
+◈ .smeme
+◈ .trigger
 ◈ .getsticker
+◈ .tgsticker
 ◈ .emojimix
 ◈ .toimg
 ◈ .tovid
 ◈ .ttp
-◈ .telesticker
 ◈ .attp
 ◈ .attp2
 ◈ .attp3
@@ -325,36 +348,61 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       lkr = `
 ┌───『 *Tools* 』
 ◈ .autosticker
-◈ .pdf
+◈ .tgsticker
+◈ .topdf
 ◈ .whatmusic
+◈ .filelength
+◈ .tempmail
+◈ .checkmail
+◈ .course
 ◈ .calc
 ◈ .google
+◈ .imdb
+◈ .reddit
 ◈ .lyrics
 ◈ .readmore
 ◈ .ssweb
-◈ .tts
+◈ .carbon
+◈ .element
 ◈ .translate
 ◈ .tourl
+◈ .trace
 ◈ .wikipedia
 ◈ .nowa
 ◈ .qrmaker
 ◈ .readqr
 ◈ .fancy
 ◈ .weather
-◈ .siri
-◈ .alexa
-◈ .dalle
 ◈ .tocartoon
 ◈ .quote
 ◈ .technews
 ◈ .define
+◈ .itunes
 ◈ .pokedex
 ◈ .removebg
-◈ .apk
 ◈ .tinyurl/shorturl
 ◈ .readvo
-◈ .truecaller
 ◈ .true
+◈ .wa
+◈ .voz
+╰────────❍` //
+      break
+    case 'audiotool': 
+ lkr = `
+┌───『 *Audio* 』
+◈ .bass
+◈ .blown
+◈ .deep
+◈ .earrape
+◈ .fas?t
+◈ .nightcore
+◈ .reverse
+◈ .robot
+◈ .slow
+◈ .smooth
+◈ .tupai
+◈ .squirrel
+◈ .chipmunk
 ╰────────❍` //
       break
     case 'nsfwmenu': 
@@ -483,6 +531,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 handler.help = [
   'list',
   'aimenu',
+  'audiotool',
   'botmenu',
   'ownermenu',
   'groupmenu',
@@ -501,6 +550,7 @@ handler.tags = ['main']
 handler.command = [
   'list',
   'aimenu',
+  'audiotool',
   'botmenu',
   'ownermenu',
   'groupmenu',
