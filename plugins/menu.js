@@ -46,7 +46,6 @@ let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 
 let str = `
   『 *GLOBAL-MD* 』  
-
 ╔┈┈┈┈┈┈┈┈┈┈┈┈┈
 ╎❒ *CREATOR : QASIM*
 ╎
@@ -89,7 +88,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-                                "{\"title\":\"BUTTON MENU\",\"sections\":[{\"title\":\"HERE IS BUTTONS MENU\",\"highlight_label\":\"GLOBAL\",\"rows\":[{\"header\":\"\",\"title\":\"🧲 Bot Menu\",\"description\":\"The Bot's secret control panel.\",\"id\":\".botmenu\"},{\"header\":\"\",\"title\":\"🪅 Owner Menu\",\"description\":\"Yep, that's for you, Boss!\",\"id\":\".ownermenu\"},{\"header\":\"\",\"title\":\"♦️ Group Menu\",\"description\":\"Group shenanigans central!\",\"id\":\".groupmenu\"},{\"header\":\"\",\"title\":\"🗂️ Download Menu\",\"description\":\"'DL' stands for 'Delicious Loot'.\",\"id\":\".dlmenu\"},{\"header\":\"\",\"title\":\"🎭 Fun Menu\",\"description\":\"The bot's party hat. Games, jokes and instant ROFLs.\",\"id\":\".funmenu\"},{\"header\":\"\",\"title\":\"💰 Economy Menu\",\"description\":\"Your personal vault of virtual economy.\",\"id\":\".economymenu\"},{\"header\":\"\",\"title\":\"🎮 Game Menu\",\"description\":\"Enter the gaming arena.\",\"id\":\".gamemenu\"},{\"header\":\"\",\"title\":\"🪢 Sticker Menu\",\"description\":\"A rainbow of stickers.\",\"id\":\".stickermenu\"},{\"header\":\"\",\"title\":\"🛠️ Tool Menu\",\"description\":\"Your handy-dandy toolkit.\",\"id\":\".toolmenu\"},{\"header\":\"\",\"title\":\"🐯 Logo Menu\",\"description\":\"Create a logo that screams You.\",\"id\":\".logomenu\"},{\"header\":\"\",\"title\":\"💃 NSFW Menu\",\"description\":\"The After Dark menu.\",\"id\":\".nsfwmenu\"}]}]}" 
+                                "{\"title\":\"BUTTON MENU\",\"sections\":[{\"title\":\"HERE IS BUTTONS MENU\",\"highlight_label\":\"GLOBAL\",\"rows\":[{\"header\":\"\",\"title\":\"🛟 Bot Menu\",\"description\":\"The Bot's secret control panel.\",\"id\":\".botmenu\"},{\"header\":\"\",\"title\":\"🛫 Owner Menu\",\"description\":\"Yep, that's for you, Boss!\",\"id\":\".ownermenu\"},{\"header\":\"\",\"title\":\"🪙 Group Menu\",\"description\":\"Group shenanigans central!\",\"id\":\".groupmenu\"},{\"header\":\"\",\"title\":\"🗂️ Download Menu\",\"description\":\"'DL' stands for 'Delicious Loot'.\",\"id\":\".dlmenu\"},{\"header\":\"\",\"title\":\"🎭 Fun Menu\",\"description\":\"The bot's party hat. Games, jokes and instant ROFLs.\",\"id\":\".funmenu\"},{\"header\":\"\",\"title\":\"💵 Economy Menu\",\"description\":\"Your personal vault of virtual economy.\",\"id\":\".economymenu\"},{\"header\":\"\",\"title\":\"🖲️ Game Menu\",\"description\":\"Enter the gaming arena.\",\"id\":\".gamemenu\"},{\"header\":\"\",\"title\":\"🎊 Sticker Menu\",\"description\":\"A rainbow of stickers.\",\"id\":\".stickermenu\"},{\"header\":\"\",\"title\":\"🪁 Tool Menu\",\"description\":\"Your handy-dandy toolkit.\",\"id\":\".toolmenu\"},{\"header\":\"\",\"title\":\"🐯 Logo Menu\",\"description\":\"Create a logo that screams You.\",\"id\":\".logomenu\"},{\"header\":\"\",\"title\":\"🃏 NSFW Menu\",\"description\":\"The After Dark menu.\",\"id\":\".nsfwmenu\"},{\"header\":\"\",\"title\":\"🎴 Anime Menu\",\"description\":\"Choose If You Like.\",\"id\":\".animemenu\"},{\"header\":\"\",\"title\":\"🧬 AI Menu\",\"description\":\"Your Personal Copilot.\",\"id\":\".aimenu\"},{\"header\":\"\",\"title\":\"🪩 Audio Tool\",\"description\":\"Edit Audio As You Like.\",\"id\":\".audiotool\"}]}]}" 
                 },
                  {
                 "name": "quick_reply",
@@ -98,7 +97,7 @@ let msg = generateWAMessageFromContent(m.chat, {
                  },
                   {
                   "name": "cta_url",
-                  "buttonParamsJson": "{\"display_text\":\"OWNER 🌟\",\"Url\":\"https://github.com/GlobalTechInfo\"}"
+                  "buttonParamsJson": "{\"display_text\":\"OWNER 🌟\",\"Url\":\"https://wa.me/message/HA35ZL76JSHJB1\"}"
                   },
                   {
                   "name": "cta_url",
