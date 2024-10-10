@@ -61,7 +61,7 @@ let str = `
 ╎┃ ❒ .ownermenu
 ╎┃ ❒ .makermenu
 ╎┃ ❒ .enable
-╎┃ ❒ .makermenu
+╎┃ ❒ .menu2
 ╎┃ ❒ .botmenu
 ╎┃ ❒ .funmenu
 ╎┃ ❒ .gamemenu
@@ -69,7 +69,7 @@ let str = `
 ╎┃ ❒ .aimenu
 ╎┃ ❒ .help2
 ╎┃ ❒ .list
-╎┃ ❒ .menu
+╎┃ ❒ .play3
 ╎┗━━━━━━━━━━━
 ╚┈┈┈┈┈┈┈┈┈┈┈┈┈
 © GlobalTechInfo
