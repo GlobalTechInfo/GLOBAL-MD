@@ -46,6 +46,7 @@ let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 
 let str = `
   『 *GLOBAL-MD* 』  
+  
 ╔┈┈┈┈┈┈┈┈┈┈┈┈┈
 ╎❒ *CREATOR : QASIM*
 ╎
