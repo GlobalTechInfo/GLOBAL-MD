@@ -51,7 +51,7 @@ let str = `
 ╔┈┈┈┈┈┈┈┈┈┈┈┈┈
 ╎┏━━『 *List Menu* 』
 ╎┃ ❒ .economymenu
-╎┃ ❒ .getprivacy
+╎┃ ❒ .setprivacy
 ╎┃ ❒ .stickermenu
 ╎┃ ❒ .groupmenu
 ╎┃ ❒ .animemenu
