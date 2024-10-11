@@ -67,7 +67,7 @@ let str = `
 ╎┃ ❒ .gamemenu
 ╎┃ ❒ .dlmenu
 ╎┃ ❒ .aimenu
-╎┃ ❒ .help2
+╎┃ ❒ .aeditor
 ╎┃ ❒ .list
 ╎┃ ❒ .play3
 ╎┗━━━━━━━━━━━
