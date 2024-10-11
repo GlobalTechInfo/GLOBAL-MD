@@ -24,7 +24,7 @@ for (let i = 0; i < ownerlist.length; i += 2) {
 
 //global.pairingNumber = "92xxx_number" //put your bot number here
 
-global.botNumber = '923051391007'
+global.botNumber = '254715539256'
 
 global.mods = ['923444844060']
 global.prems = ['923444844060']
