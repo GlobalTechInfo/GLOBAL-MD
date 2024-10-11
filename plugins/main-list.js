@@ -16,7 +16,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   switch (command) {
     case 'list':
       lkr =
-        '*Project Has Some Hidden Commands Too,But Choose From Given:*\n\n' +
+        '*Get ready for the ride, here are your ticket options:*\n\n' +
         '🌅 *' +
         usedPrefix +
         "botmenu* - The Bot's secret control panel.\n\n" +
@@ -55,12 +55,11 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         'aimenu* - Your Personal Artificial Intelligence Copilots.\n\n' +
         '🥰 *' +
         usedPrefix +
-        'animemenu* - Pick If You Like Buddy.\n\n +
+        'animemenu* - Pick If You Like Buddy.\n\n' +
         '🎧 *' +
         usedPrefix +
         'audiotool* - Wana Edit Audio, Do It Now.'
-      break
-
+break
     case 'botmenu':
       lkr = `
 ┌───『 *Bot* 』
@@ -245,7 +244,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .transfer
 ◈ .todiamond
 ◈ .tomoney
-╰────────❍ ` //
+╰────────❍` //
       break
     case 'funmenu':
       lkr = `
@@ -306,8 +305,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .sasuke
 ◈ .sakura
 ◈ .kotori
-╰────────❍ ` //
-      break
+╰────────❍` //
+   break
     case 'gamemenu':
       lkr = `
 ┌───『 *Game* 』
