@@ -91,7 +91,7 @@ global.loadDatabase = async function loadDatabase() {
 loadDatabase()
 
 //-- SESSION
-global.authFile = `sessions`
+global.authFile = `session`
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile)
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache()
@@ -141,21 +141,22 @@ const connectionOptions = {
   }
 
 //--
-global.conn = makeWASocket(connectionOptions)
+global.conn = makeWASocket(connectionOptions);
 
 if (opcion === '2' || methodCode) {
-  if (!conn.authState.creds.registered) {  
-  if (MethodMobile) throw new Error('⚠️ An Error occurred')
-  
-  let addNumber
-  if (!!phoneNumber) {
-  addNumber = phoneNumber.replace(/[^0-9]/g, '')
-  if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-  console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Your number must begin with the country code")))
-  process.exit(0)
-  }} else {
-  while (true) {
-  addNumber = await question(chalk.bgBlack(chalk.bold.greenBright("\n\n✳️ Write your number\n\nExample: 5491168xxxx\n\n\n\n")))
+  if (!conn.authState.creds.registered) {
+    if (MethodMobile) throw new Error('⚠️ An Error occurred');
+
+    let addNumber;
+    if (phoneNumber) {
+      addNumber = phoneNumber.replace(/[^0-9]/g, '');
+      if (!Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
+        console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Your number must begin with the country code")));
+        process.exit(0);
+      }
+    } else {
+      while (true) {
+        addNumber = await question(chalk.bgBlack(chalk.bold.greenBright("\n\n✳️ Write your number\n\nExample: 5491168xxxx\n\n")))
   addNumber = addNumber.replace(/[^0-9]/g, '')
   
   if (addNumber.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
