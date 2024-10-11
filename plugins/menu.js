@@ -78,7 +78,7 @@ let msg = generateWAMessageFromContent(m.chat, {
           }),
 
           header: proto.Message.InteractiveMessage.Header.create({
-          ...(await prepareWAMessageMedia({ image : { url: 'https://i.imgur.com/WlBJdfh.jpeg'}}, { upload: conn.waUploadToServer})), 
+          ...(await prepareWAMessageMedia({ image : { url: 'https://i.ibb.co/G2dh9cB/qasim.jpg'}}, { upload: conn.waUploadToServer})), 
             title: null,
             subtitle: null,
             hasMediaAttachment: false
