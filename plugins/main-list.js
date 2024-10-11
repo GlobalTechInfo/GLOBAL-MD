@@ -65,12 +65,15 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .alive
 ◈ .anticall
 ◈ .chatbot
-◈ .bot
 ◈ .owner
 ◈ .script
 ◈ .test
 ◈ .runtime
 ◈ .infobot
+◈ .list
+◈ .menu
+◈ .menu2
+◈ .menu3
 ◈ .mrcs
 ◈ .bebots
 ◈ .jadibot
@@ -207,9 +210,9 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .gitclone 
 ◈ .twitter
 ◈ .tiktok
+◈ .tiktokstalk
 ◈ .insta
 ◈ .igstalk
-◈ .spotify
 ◈ .facebook
 ◈ .swdl
 ◈ .dlstatus
@@ -359,7 +362,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .trace
 ◈ .wikipedia
 ◈ .nowa
-◈ .qrmaker
+◈ .qrcode
 ◈ .readqr
 ◈ .weather
 ◈ .tocartoon
