@@ -10,7 +10,7 @@ let handler = async function (m, { conn, text }) {
   if (commonNumbers.length > 0) {
     conn.reply(m.chat, `❇️ Here Is The Contact Of My Owner: ${commonNumbers.join(', ')}`, m);
   } else {
-    conn.reply(m.chat, `You are not recognized as a bot owner.`, m);
+    conn.reply(m.chat, `❎ You are not recognized as a bot owner.`, m);
   }
 };
 
