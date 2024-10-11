@@ -46,10 +46,10 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         '🧲 *' +
         usedPrefix +
         'logomenu* - Create a logo that screams You.\n\n' +
-        '🎴*' +
+        '🎴 *' +
         usedPrefix +
         'nsfwmenu* - The After Dark menu.\n\n' +
-        '🌀*' +
+        '🌀 *' +
         usedPrefix +
         'aimenu* - Your Personal Artificial Intelligence Copilots.'
       break
@@ -74,7 +74,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .mrcs
 ◈ .bebots
 ◈ .jadibot
-◈ .serbot
 ◈ .donate
 ◈ .groups
 ◈ .blocklist
@@ -90,9 +89,10 @@ let handler = async (m, { conn, usedPrefix, command }) => {
  ◈ .gitagpt
  ◈ .gptpro
  ◈ .gpt4
+ ◈ .bing
  ◈ .civitai
  ◈ .blackpink
- ◈ .image
+ ◈ .bingimage
  ◈ .dalle
  ◈ .bro
  ◈ .ai
@@ -111,7 +111,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .broadcastgc
 ◈ .readviewonce
 ◈ .setprivacy
-◈ .getprivacy
 ◈ .join
 ◈ .setppbot
 ◈ .setprefix
@@ -144,7 +143,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .ban
 ◈ .afk
 ◈ .save
-◈ .update
 ◈ .allow
 ◈ .listban
 ╰────────❍` //
@@ -193,7 +191,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ┌───『 *Download* 』
 ◈ .video
 ◈ .itunes
-◈ .play
 ◈ .play2
 ◈ .play3
 ◈ .apk
@@ -364,7 +361,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ .nowa
 ◈ .qrmaker
 ◈ .readqr
-◈ .fancy
 ◈ .weather
 ◈ .tocartoon
 ◈ .quote
