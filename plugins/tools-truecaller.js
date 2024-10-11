@@ -1,4 +1,4 @@
-/*
+
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, text }) => {
@@ -61,4 +61,3 @@ handler.tags = ['tools']
 handler.command = /^(true|caller)$/i
 
 export default handler
-*/
