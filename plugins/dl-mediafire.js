@@ -1,38 +1,54 @@
-import fetch from 'node-fetch'
-import { mediafiredl } from '@bochilteam/scraper'
+import fetch from 'node-fetch';
+import { mediafiredl } from '@bochilteam/scraper';
 
 let handler = async (m, { conn, args, usedPrefix, command, isOwner, isPrems }) => {
-  var limit
-  if (isOwner || isPrems) limit = 1200
-  else limit = 100
-  if (!args[0]) throw `✳️ Enter the mediafire link next to the command`
-  if (!args[0].match(/mediafire/gi)) throw `❎ Link incorrect`
-  m.react(rwait)
-  let full = /f$/i.test(command)
-  let u = /https?:\/\//.test(args[0]) ? args[0] : 'https://' + args[0]
-  let ss = await (await fetch(`https://image.thum.io/get/fullpage/${u}`)).buffer()
-  let res = await mediafiredl(args[0])
-  let { url, url2, filename, ext, aploud, filesize, filesizeH } = res
-  let isLimit = (isPrems || isOwner ? limit : limit) * 1012 < filesize
-  let caption = `
-   ≡ *MEDIAFIRE*
+  var limit;
+  if (isOwner || isPrems) limit = 1200;
+  else limit = 100;
 
-▢ *Number:* ${filename}
-▢ *Size:* ${filesizeH}
-▢ *Extension:* ${ext}
-▢ *Uploaded:* ${aploud}
-${isLimit ? `\n▢ The file exceeds the download limit *+${limit} MB*\nUpgrade to premium to be able to download files more than *900 MB*` : ''} 
-`.trim()
-  await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m)
+  if (!args[0]) throw `✳️ Enter the mediafire link next to the command`;
+  if (!args[0].match(/mediafire/gi)) throw `❎ Link incorrect`;
 
-  if (!isLimit)
-    await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
-  m.react(done)
+  m.react('⌛'); // Assuming '⌛' is defined for a loading state
+
+  try {
+    let full = /f$/i.test(command);
+    let u = /https?:\/\//.test(args[0]) ? args[0] : 'https://' + args[0];
+    
+    console.log('Fetching screenshot...'); // Debugging log
+    let ss = await (await fetch(`https://image.thum.io/get/fullpage/${u}`)).buffer();
+    console.log('Screenshot fetched.'); // Debugging log
+
+    console.log('Downloading from MediaFire...'); // Debugging log
+    let res = await mediafiredl(args[0]);
+    let { url, url2, filename, ext, aploud, filesize, filesizeH } = res;
+    console.log('Download data:', res); // Debugging log
+
+    let isLimit = (isPrems || isOwner ? limit : limit) * 1012 < filesize;
+    let caption = `
+     ≡ *MEDIAFIRE*
+
+    ▢ *Number:* ${filename}
+    ▢ *Size:* ${filesizeH}
+    ▢ *Extension:* ${ext}
+    ▢ *Uploaded:* ${aploud}
+    ${isLimit ? `\n▢ The file exceeds the download limit *+${limit} MB*\nUpgrade to premium to be able to download files more than *900 MB*` : ''} 
+    `.trim();
+
+    await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m);
+
+    if (!isLimit)
+      await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true });
+    
+    m.react('✅'); // Assuming '✅' is defined for a done state
+  } catch (error) {
+    console.error('Error:', error); // Log the actual error for debugging
+    throw `*[❗] An error occurred. Make sure to provide a valid link.*`;
+  }
 }
-handler.help = ['mediafire <url>']
-handler.tags = ['downloader', 'premium']
-handler.command = ['mediafire', 'mfire']
-handler.credit = true
-handler.premium = false
 
-export default handler
+handler.help = ['mediafire <url>'];
+handler.tags = ['downloader'];
+handler.command = ['mediafire', 'mfire'];
+
+export default handler;
