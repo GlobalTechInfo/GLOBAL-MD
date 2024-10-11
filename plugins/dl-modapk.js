@@ -1,19 +1,21 @@
-import { download } from 'aptoide-scraper'
+import { download } from 'aptoide-scraper';
 
 let handler = async (m, { conn, usedPrefix: prefix, command, text }) => {
   try {
     if (command === 'apk') {
-      if (!text) throw `*[❗] Please provide the APK Name you want to download.*`
+      if (!text) throw `*[❗] Please provide the APK Name you want to download.*`;
 
-      await conn.reply(m.chat, global.wait, m)
-      let data = await download(text)
+      await conn.reply(m.chat, global.wait, m);
+      console.log('Starting download...'); // Debugging log
+      let data = await download(text);
+      console.log('Download data:', data); // Debugging log
 
       if (data.size.replace(' MB', '') > 200) {
         return await conn.sendMessage(
           m.chat,
           { text: '*[⛔] The file is too large.*' },
           { quoted: m }
-        )
+        );
       }
 
       if (data.size.includes('GB')) {
@@ -21,7 +23,7 @@ let handler = async (m, { conn, usedPrefix: prefix, command, text }) => {
           m.chat,
           { text: '*[⛔] The file is too large.*' },
           { quoted: m }
-        )
+        );
       }
 
       await conn.sendMessage(
@@ -33,14 +35,15 @@ let handler = async (m, { conn, usedPrefix: prefix, command, text }) => {
           caption: null,
         },
         { quoted: m }
-      )
+      );
     }
-  } catch {
-    throw `*[❗] An error occurred. Make sure to provide a valid link.*`
+  } catch (error) {
+    console.error(error); // Log the actual error for debugging
+    throw `*[❗] An error occurred. Make sure to provide a valid link.*`;
   }
 }
 
-handler.help = ['modapk']
-handler.tags = ['downloader']
-handler.command = /^apk$/i
-export default handler
+handler.help = ['modapk'];
+handler.tags = ['downloader'];
+handler.command = /^apk$/i;
+export default handler;
