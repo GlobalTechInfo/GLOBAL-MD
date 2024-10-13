@@ -264,8 +264,7 @@ const translations = {
     privateH: 'This command can only be used in the *Bot\'s private chat*',
     adminH: 'This command is only for *Group Admins*',
     botAdmin: 'To use this command, I must be an *Administrator*!',
-    unregH: 'Register to use this feature by typing:\n\n*/reg*',
-    ig: `▢ Follow me on Instagram\n${fgig}`
+    unregH: 'Register to use this feature by typing:\n\n*/reg*'
 }
 
 export default translations
