@@ -264,8 +264,7 @@ const translations = {
     privateH: 'Perintah ini hanya dapat digunakan di *chat pribadi Bot*',
     adminH: 'Perintah ini hanya untuk *Admin Grup*',
     botAdmin: 'Untuk menggunakan perintah ini, saya perlu menjadi *Admin!*',
-    unregH: 'Daftar untuk menggunakan fungsi ini. Ketik:\n\n*/reg*',
-    ig: `▢ Ikuti saya di Instagram\n${fgig}`
+    unregH: 'Daftar untuk menggunakan fungsi ini. Ketik:\n\n*/reg*'
 }
 
 export default translations
