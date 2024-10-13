@@ -264,8 +264,7 @@ const translations = {
     privateH: 'يمكن استخدام هذا الأمر فقط في *محادثة خاصة مع البوت*',
     adminH: 'هذا الأمر مخصص فقط لـ *المشرفين* في المجموعة',
     botAdmin: 'يجب أن أكون *مسؤولًا* لاستخدام هذا الأمر!',
-    unregH: 'سجل لاستخدام هذه الوظيفة بكتابة:\n\n/ reg',
-    ig: `▢ تابعني على Instagram\n${fgig}`
+    unregH: 'سجل لاستخدام هذه الوظيفة بكتابة:\n\n/ reg'
 }
 
 export default translations
