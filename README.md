@@ -23,14 +23,17 @@ By The Way, There Is No need Of Any Pre Connection, Nor Any Session ID or Creds 
 
 ----
 
-1. _Just Replace Your Number_
+1. _First Method_
 
- globalbotNumber = '923051391007'
+Fork Repo & Just Replace Your Number
+
+globalbotNumber = '923051391007'
+
 in config.js and it will directly shows you a pairing code at the end of Deployment, pair and get connected.
 
 ----
 
-2. _The Second Method_
+2. _Second Method_
 
 Fork Repo 
 
@@ -49,6 +52,8 @@ Then Pair From Following
   <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <p align="center">
 
+
+<p align="center">
  _DEPLOY IN TERMUX/UBUNTU_
  
 ```
