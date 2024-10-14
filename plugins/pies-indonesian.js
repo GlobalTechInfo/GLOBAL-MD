@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+/*import fetch from 'node-fetch';
 
 let handler = async (m, { conn }) => {
   let msg = `Indonesia Hot Girl`;
@@ -22,3 +22,4 @@ handler.tags = ['pies', 'sfw'];
 handler.help = handler.command = ['indopie'];
 
 export default handler;
+*/
