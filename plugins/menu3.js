@@ -1,22 +1,24 @@
 let handler = async function (m, { conn, text, usedPrefix }) {
-  let m2 = `
-≡ Use these commands without the prefix: *${usedPrefix}*
+  let m2 = `≡ Use these commands without the prefix: *${usedPrefix}*
 ┌─⊷ *AUDIOS* 
 ▢ Bot
 ▢ Good morning
 ▢ Good afternoon
 ▢ Good evening
 ▢ Fine gentlemen
-▢ Dont be Sad
-└──────────────
-`
+▢ Don't be Sad
+└─────────────⊷`;
+  
   let pp = './assets/qasim.jpg';
-  conn.sendButton(m.chat, m2, 'GLOBAL-MD', pp, [
+  
+  // Send a button message
+  await conn.sendButton(m.chat, m2, 'GLOBAL-MD', pp, [
     ['⏍ InfoBot', `${usedPrefix}botinfo`],
     ['⌬ Support', `${usedPrefix}groups`]
   ], m, { quoted: m });
 
-  conn.sendFile(m.chat, pp, 'menu.jpg', m2, m);
+  // Send an image file
+  await conn.sendFile(m.chat, pp, 'menu.jpg', m2, m);
 }
 
 handler.help = ['menu3'];
