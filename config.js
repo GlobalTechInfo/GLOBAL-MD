@@ -46,21 +46,6 @@ global.lolkeysapi = ['GataDios']
 global.canal = 'https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07'
 
 
-global.APIs = {
-  // API Prefix
-  // name: 'https://website'
-  xteam: 'https://api.xteam.xyz',
-  dzx: 'https://api.dhamzxploit.my.id',
-  lol: 'https://api.lolhuman.xyz',
-  violetics: 'https://violetics.pw',
-  neoxr: 'https://api.neoxr.my.id',
-  zenzapis: 'https://zenzapis.xyz',
-  akuari: 'https://api.akuari.my.id',
-  akuari2: 'https://apimu.my.id',
-  nrtm: 'https://fg-nrtm.ddns.net',
-  bg: 'http://bochil.ddns.net',
-  fgmods: 'https://api-fgmods.ddns.net',
-}
 global.APIKeys = {
   // APIKey Here
   // 'https://website': 'apikey'
