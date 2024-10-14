@@ -1,7 +1,12 @@
 let handler = async (m, { conn, args }) => {
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
   let username = conn.getName(who);
-  
+
+  // Check if `m.mentionedJid` is iterable
+  if (!Array.isArray(m.mentionedJid)) {
+    m.mentionedJid = [];
+  }
+
   await conn.sendContact(m.chat, [[`${who.split`@`[0]}@s.whatsapp.net`, `${username}`]], m);
 }
 
