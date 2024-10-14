@@ -48,7 +48,7 @@ export async function all(m) {
       m,
       { mentions: [m.sender] }
     );
-    m.react('🤩');
+    m.react('');
   }
   return !0;
 }
