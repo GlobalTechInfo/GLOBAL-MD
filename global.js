@@ -1,16 +1,17 @@
 
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
+
 import './config.js'; 
 import { createRequire } from "module"; // Bring in the ability to create the 'require' method
-import path, { join } from 'path'
-import { fileURLToPath, pathToFileURL } from 'url'
-import { platform } from 'process'
+import path, { join } from 'path';
+import { fileURLToPath, pathToFileURL } from 'url';
+import { platform } from 'process';
 import * as ws from 'ws';
 import { readdirSync, statSync, unlinkSync, existsSync, readFileSync, watch, rmSync } from 'fs';
 import yargs from 'yargs';
 import { spawn } from 'child_process';
 import lodash from 'lodash';
-import chalk from 'chalk'
+import chalk from 'chalk';
 import syntaxerror from 'syntax-error';
 import { tmpdir } from 'os';
 import { format } from 'util';
@@ -18,24 +19,26 @@ import { makeWASocket, protoType, serialize } from './lib/simple.js';
 import { Low, JSONFile } from 'lowdb';
 import pino from 'pino';
 import { mongoDB, mongoDBV2 } from './lib/mongoDB.js';
-import store from './lib/store.js'
-import { Boom } from '@hapi/boom'
-const {
-    useMultiFileAuthState,
-    DisconnectReason,
+import store from './lib/store.js';
+import { Boom } from '@hapi/boom';
+import moment from 'moment-timezone';
+import NodeCache from 'node-cache';
+import readline from 'readline';
+
+// Ensure you don't double import the same module
+const { 
+    useMultiFileAuthState, 
+    DisconnectReason, 
     fetchLatestBaileysVersion, 
-    MessageRetryMap,
+    MessageRetryMap, 
     makeCacheableSignalKeyStore, 
-    jidNormalizedUser,
-    PHONENUMBER_MCC
-   } = await import('@whiskeysockets/baileys')
-import moment from 'moment-timezone'
-import NodeCache from 'node-cache'
-import readline from 'readline'
-import fs from 'fs'
-const { CONNECTING } = ws
-const { chain } = lodash
-const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
+    jidNormalizedUser, 
+    PHONENUMBER_MCC 
+} = await import('@whiskeysockets/baileys');
+
+const { CONNECTING } = ws;
+const { chain } = lodash;
+const PORT = process.env.PORT || process.env.SERVER_PORT || 3000;
 
 protoType()
 serialize()
