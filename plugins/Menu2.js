@@ -50,26 +50,26 @@ let str = `
 ╚┈┈┈┈┈┈┈┈┈┈┈┈┈
 ╔┈┈┈┈┈┈┈┈┈┈┈┈┈
 ╎┏━━『 *List Menu* 』
-╎┃ ❒ .economymenu
-╎┃ ❒ .setprivacy
-╎┃ ❒ .stickermenu
-╎┃ ❒ .groupmenu
-╎┃ ❒ .animemenu
-╎┃ ❒ .logomenu
-╎┃ ❒ .nsfwmenu
-╎┃ ❒ .toolmenu
-╎┃ ❒ .ownermenu
-╎┃ ❒ .makermenu
-╎┃ ❒ .enable
-╎┃ ❒ .menu2
-╎┃ ❒ .botmenu
-╎┃ ❒ .funmenu
-╎┃ ❒ .gamemenu
-╎┃ ❒ .dlmenu
-╎┃ ❒ .aimenu
-╎┃ ❒ .aeditor
-╎┃ ❒ .list
-╎┃ ❒ .play3
+╎┃ ❒ .Economymenu
+╎┃ ❒ .Setprivacy
+╎┃ ❒ .Stickermenu
+╎┃ ❒ .Groupmenu
+╎┃ ❒ .Animemenu
+╎┃ ❒ .Logomenu
+╎┃ ❒ .Nsfwmenu
+╎┃ ❒ .Toolmenu
+╎┃ ❒ .Ownermenu
+╎┃ ❒ .Menu3
+╎┃ ❒ .Enable
+╎┃ ❒ .Menu2
+╎┃ ❒ .Botmenu
+╎┃ ❒ .Funmenu
+╎┃ ❒ .Gamemenu
+╎┃ ❒ .Dlmenu
+╎┃ ❒ .Aimenu
+╎┃ ❒ .Aeditor
+╎┃ ❒ .List
+╎┃ ❒ .Play3
 ╎┗━━━━━━━━━━━
 ╚┈┈┈┈┈┈┈┈┈┈┈┈┈
 © GlobalTechInfo
