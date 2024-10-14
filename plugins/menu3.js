@@ -12,8 +12,8 @@ let handler = async function (m, { conn, text, usedPrefix }) {
 `
   let pp = './assets/qasim.jpg';
   conn.sendButton(m.chat, m2, 'GLOBAL-MD', pp, [
-    ['⏍ Info', `${usedPrefix}botinfo`],
-    ['⌬ Grupos', `${usedPrefix}groups`]
+    ['⏍ InfoBot', `${usedPrefix}botinfo`],
+    ['⌬ Support', `${usedPrefix}groups`]
   ], m, { quoted: m });
 
   conn.sendFile(m.chat, pp, 'menu.jpg', m2, m);
