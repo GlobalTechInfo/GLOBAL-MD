@@ -7,10 +7,10 @@ let handler = async function (m, { conn, text, usedPrefix }) {
 ▢ Good evening
 ▢ Fine gentlemen
 ▢ Don't be Sad
-└─────────────⊷`;
+└──────────────`;
   
   let pp = './assets/qasim.jpg';
-  
+
   // Send a button message
   await conn.sendButton(m.chat, m2, 'GLOBAL-MD', pp, [
     ['⏍ InfoBot', `${usedPrefix}botinfo`],
