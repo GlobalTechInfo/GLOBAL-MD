@@ -6,7 +6,7 @@ import path, { join } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { platform } from 'process';
 import * as ws from 'ws';
-import fs, { readdirSync, statSync, unlinkSync, existsSync, readFileSync, watch, rmSync } from 'fs':
+import fs, { readdirSync, statSync, unlinkSync, existsSync, readFileSync, watch, rmSync } from 'fs';
 import yargs from 'yargs';
 import { spawn } from 'child_process';
 import lodash from 'lodash';
