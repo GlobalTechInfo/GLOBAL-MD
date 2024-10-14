@@ -70,6 +70,7 @@ global.APIKeys = {
   'https://violetics.pw': 'beta',
   'https://zenzapis.xyz': `${keysxxx}`,
   'https://api-fgmods.ddns.net': 'fg-dylux',
+  'https://shizoapi.onrender.com': `${shizokeys}`,
 }
 
 // Sticker WM
