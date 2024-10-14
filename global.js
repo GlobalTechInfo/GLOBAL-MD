@@ -1,13 +1,13 @@
 
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 
-import './config.js'; 
+import './config.js';
 import { createRequire } from "module"; // Bring in the ability to create the 'require' method
 import path, { join } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { platform } from 'process';
 import * as ws from 'ws';
-import { readdirSync, statSync, unlinkSync, existsSync, readFileSync, watch, rmSync } from 'fs';
+import { readdirSync, statSync, unlinkSync, existsSync, readFileSync, watch, rmSync } from 'fs'; // fs included here
 import yargs from 'yargs';
 import { spawn } from 'child_process';
 import lodash from 'lodash';
@@ -25,7 +25,6 @@ import moment from 'moment-timezone';
 import NodeCache from 'node-cache';
 import readline from 'readline';
 
-// Ensure you don't double import the same module
 const { 
     useMultiFileAuthState, 
     DisconnectReason, 
@@ -39,7 +38,6 @@ const {
 const { CONNECTING } = ws;
 const { chain } = lodash;
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000;
-
 protoType()
 serialize()
 
