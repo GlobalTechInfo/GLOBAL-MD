@@ -41,46 +41,31 @@ let str = `
 
 📜 *_Quote of the day: ${quote}_* 📜
 
-┏━『 *User Info* 』━◧
-┣⌬ *User Tag:* ${taguser}
-┣⌬ *Name:* ${name}
-┣⌬ *Time:* ${wib}
-┣⌬ *Date:* ${date}
-┗━━━━━━━━━━━━━━◧
-┏━『 *Bot Status* 』━◧
-┣⌬ *Bot Name:* ${botname} 
-┣⌬ *Prefix:* ${usedPrefix}
-┣⌬ *Uptime:* ${uptime}
-┣⌬ *Users:* ${totaluser}
-┗━━━━━━━━━━━━━━◧
-
-乂───『 *INFO*』───乂 
+乂──『 *INFO*』──乂 
 │ *List Menu*
 ╰───────❍
 
-┏━━⟪ *LIST MENU* ⟫━━⦿
-
-┃ ✗ AI Menu
-┃ ✗ Anime Menu
-┃ ✗ Audio Menu
-┃ ✗ Bot Menu
-┃ ✗ Download Menu
-┃ ✗ Economy Menu
-┃ ✗ Fun Menu
-┃ ✗ Game Menu
-┃ ✗ Group Menu
-┃ ✗ Logo Menu
-┃ ✗ News Menu
-┃ ✗ Maker Menu
-┃ ✗ Owner Menu
-┃ ✗ Plugin Menu
-┃ ✗ Reaction Menu
-┃ ✗ Religion Menu
-┃ ✗ Sticker Menu
-┃ ✗ Tools Menu
-┃ ✗ Nsfw Menu
-
-┗━━━━━━━━━━━━━━⦿
+┏━⟪ *MENU2* ⟫━⦿
+┃• Economymenu
+┃• Groupmenu
+┃• Makermenu
+┃• Ownermenu
+┃• Stickermenu
+┃• Tools Menu
+┃• Gamemenu
+┃• Groupmenu
+┃• Logomenu
+┃• Setprivacy
+┃• BotMenu
+┃• DlMenu
+┃• Enable
+┃• Aimenu
+┃• Aeditor
+┃• Play3
+┃• Menu
+┃• Menu3
+┃• List
+┗━━━━━━━━━━━⦿
 
 © GlobalTechInfo
 
@@ -175,3 +160,4 @@ function clockString(ms) {
       "I'm not saying I'm Spider-Man. I'm just saying no one has ever seen me and Spider-Man in the same room together.",
       "I'm not saying I'm a superhero. I'm just saying no one has ever seen me and a superhero in the same room together."
       ];
+                         
