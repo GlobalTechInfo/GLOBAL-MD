@@ -42,8 +42,6 @@ serialize()
 
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) } 
 
-global.gurubot = 'https://www.guruapi.tech/api'
-
 global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
 // global.Fn = function functionCallBack(fn, ...args) { return fn.call(global.conn, ...args) }
 global.timestamp = {
@@ -108,11 +106,11 @@ const question = (texto) => new Promise((resolver) => rl.question(texto, resolve
 let opcion
 if (!fs.existsSync(`./${authFile}/creds.json`) && !methodCodeQR && !methodCode) {
 while (true) {
-opcion = await question("\n\n✳️ Enter the connection method\n🔺 1 : for QR\n🔺 2 : for Code\n\n\n")
+opcion = await question("\n\n✳️ Enter the connection method\n🔺 1 : For QR\n🔺 2 : For Code\n\n\n")
 if (opcion === '1' || opcion === '2') {
 break
 } else {
-console.log("\n\n🔴 Enter only one option \n\n 1 o 2\n\n" )
+console.log("\n\n🔴 Enter only one option\n\n 1 o 2\n\n" )
 }}
 opcion = opcion
 }
@@ -141,22 +139,21 @@ const connectionOptions = {
   }
 
 //--
-global.conn = makeWASocket(connectionOptions);
+global.conn = makeWASocket(connectionOptions)
 
 if (opcion === '2' || methodCode) {
-  if (!conn.authState.creds.registered) {
-    if (MethodMobile) throw new Error('⚠️ An Error occurred');
-
-    let addNumber;
-    if (phoneNumber) {
-      addNumber = phoneNumber.replace(/[^0-9]/g, '');
-      if (!Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
-        console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Your number must begin with the country code")));
-        process.exit(0);
-      }
-    } else {
-      while (true) {
-        addNumber = await question(chalk.bgBlack(chalk.bold.greenBright("\n\n✳️ Write your number\n\nExample: 5491168xxxx\n\n")))
+  if (!conn.authState.creds.registered) {  
+  if (MethodMobile) throw new Error('⚠️ An Error Occurred')
+  
+  let addNumber
+  if (!!phoneNumber) {
+  addNumber = phoneNumber.replace(/[^0-9]/g, '')
+  if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
+  console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Number must start with the country code")))
+  process.exit(0)
+  }} else {
+  while (true) {
+  addNumber = await question(chalk.bgBlack(chalk.bold.greenBright("\n\n✳️ Enter your number\n\nExample: 5491168xxxx\n\n\n\n")))
   addNumber = addNumber.replace(/[^0-9]/g, '')
   
   if (addNumber.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
@@ -204,7 +201,7 @@ async function clearTmp() {
 
 setInterval(async () => {
 	await clearTmp()
-	console.log(chalk.cyan(`✅  Auto clear  | Successfuly Cleared tmp`))
+	//console.log(chalk.cyan(`✅  Auto clear  | Successfully Cleaned tmp`))
 }, 60000) //1 munto
 
 async function connectionUpdate(update) {
@@ -219,7 +216,6 @@ async function connectionUpdate(update) {
   if (global.db.data == null) loadDatabase()
 
 } //-- cu 
-
 
 process.on('uncaughtException', console.error)
 // let strQuot = /(["'])(?:(?=(\\?))\2.)*?\1/
@@ -242,43 +238,32 @@ global.reloadHandler = async function (restatConn) {
   }
   if (!isInit) {
     conn.ev.off('messages.upsert', conn.handler)
-    conn.ev.off('messages.update', conn.pollUpdate)
     conn.ev.off('group-participants.update', conn.participantsUpdate)
     conn.ev.off('groups.update', conn.groupsUpdate)
     conn.ev.off('message.delete', conn.onDelete)
-    conn.ev.off('presence.update', conn.presenceUpdate)
     conn.ev.off('connection.update', conn.connectionUpdate)
     conn.ev.off('creds.update', conn.credsUpdate)
   }
 
-  conn.welcome = 'Hello @user!\n\n🎉 *WELCOME* to the group @group!\n\n📜 Please read the *DESCRIPTION* @desc'
-  conn.bye = 'GOODBYE @user \n\nSee you later!'
-  conn.spromote = '@user has been promoted to an admin!'
-  conn.sdemote = '@user is no longer an admin'
-  conn.sDesc = 'The group description has been updated to:\n@desc'
-  conn.sSubject = 'The group title has been changed to:\n@group'
-  conn.sIcon = 'The group icon has been updated!'
-  conn.sRevoke = 'The group link has been changed to:\n@revoke'
-  conn.sAnnounceOn = 'The group is now *CLOSED*!\nOnly admins can send messages.'
-  conn.sAnnounceOff = 'The group is now *OPEN*!\nAll participants can send messages.'
-  conn.sRestrictOn = 'Edit Group Info has been restricted to admins only!'
-  conn.sRestrictOff = 'Edit Group Info is now available to all participants!'
-  
+  conn.welcome = 'Hello, @user\nWelcome In The @group'
+  conn.bye = 'Bye @user'
+  conn.spromote = '@user promoted to admin'
+  conn.sdemote = '@user demoted'
+  conn.sDesc = 'Group description changed to\n@desc'
+  conn.sSubject = 'The group name has been changed to\n@group'
+  conn.sIcon = 'The group icon has been changed'
+  conn.sRevoke = 'The group link has been changed to\n@revoke'
   conn.handler = handler.handler.bind(global.conn)
-  conn.pollUpdate = handler.pollUpdate.bind(global.conn)
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
   conn.groupsUpdate = handler.groupsUpdate.bind(global.conn)
   conn.onDelete = handler.deleteUpdate.bind(global.conn)
-  conn.presenceUpdate = handler.presenceUpdate.bind(global.conn)
   conn.connectionUpdate = connectionUpdate.bind(global.conn)
   conn.credsUpdate = saveCreds.bind(global.conn, true)
-  
+
   conn.ev.on('messages.upsert', conn.handler)
-  conn.ev.on('messages.update', conn.pollUpdate)
   conn.ev.on('group-participants.update', conn.participantsUpdate)
   conn.ev.on('groups.update', conn.groupsUpdate)
   conn.ev.on('message.delete', conn.onDelete)
-  conn.ev.on('presence.update', conn.presenceUpdate)
   conn.ev.on('connection.update', conn.connectionUpdate)
   conn.ev.on('creds.update', conn.credsUpdate)
   isInit = false
@@ -308,7 +293,7 @@ global.reload = async (_ev, filename) => {
     if (filename in global.plugins) {
       if (existsSync(dir)) conn.logger.info(`🌟 Plugin Updated - '${filename}'`)
       else {
-        conn.logger.warn(`🗑️ Plugin Deleted - '${filename}'`)
+        conn.logger.warn(`🗑️ Plugin Removed - '${filename}'`)
         return delete global.plugins[filename]
       }
     } else conn.logger.info(`✨ New plugin - '${filename}'`)
@@ -373,5 +358,5 @@ async function _quickTest() {
 }
 
 _quickTest()
-  .then(() => conn.logger.info('✅ Quick Test Performed!'))
+  .then(() => conn.logger.info('✅ Quick Test Performed'))
   .catch(console.error)
