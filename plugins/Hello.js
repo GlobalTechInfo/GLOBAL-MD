@@ -1,29 +1,54 @@
 export async function all(m) {
-  // when someone sends you hello message
+  const greetings = [
+    'Hello', 'Hi', 'Mambo', 'Oy', 'Niaje', 'kaka', // English
+    'Hola', 'Salut', 'Bonjour', // French
+    'مرحبا', 'أهلاً', // Arabic
+    'Selamat', 'Halo', // Indonesian
+    'Kamusta', 'Mabuhay', 'Magandang', // Filipino
+    '你好', '嗨', '您好', // Chinese
+    'Mhoro', 'Mhoroi', // Shona (Zimbabwe)
+    'Salibonani', 'Lumkela', // Ndebele (Zimbabwe)
+    // More African greetings
+    'Jambo', 'Habari', // Swahili
+    'Sawubona', // Zulu
+    'Dumela', 'Kgotso', // Sotho
+    'Kedu', 'Nnoo', // Igbo (Nigeria)
+    'Bawo ni', 'Ek’aaro', // Yoruba (Nigeria)
+    'Muli bwanji', // Chichewa (Malawi)
+    'Tere', // Estonian
+    'Hei', 'Moi', // Finnish
+    'Privet', // Russian
+    'Hallo', 'Guten Tag', // German
+    'Ciao', // Italian
+    'Hej', 'Hallå', // Swedish
+    'Olá', 'Oi', // Portuguese
+    'Salut', // Romanian
+  ];
+
   if (
-    (m.mtype === 'hellomessage' ||
-      m.text.startsWith('Hello') ||
-      m.text.startsWith('Hi') ||
-      m.text.startsWith('Mambo') ||
-      m.text.startsWith('Oy') ||
-      m.text.startsWith('Niaje') ||
-      m.text.startsWith('kaka')) &&
+    greetings.some(greeting => m.text.startsWith(greeting)) &&
     !m.isBaileys &&
     !m.isGroup
- /* ) {
-    this.sendMessage(
-      m.chat,
-      {
-        text: `Hello @${m.sender.split('@')[0]}\nyou can rent the bot to join a group\n\n_For more info you can DM the owner_\n*Type* \`\`\`.owner\`\`\` *to contact the owner*`.trim(),
-      },
-      { quoted: m }*/
-    ) {
-    this.sendButton(m.chat, `*WELCOME ITS BOT JUST REPLYING*      
-    Morning or Evening @${m.sender.split('@')[0]} 
-    I May Be Offline Or May Be Slow To Respond You 😇\n\n *What We Offer*\n\n1. Pure Love 💟\n2. Bot Deployment Tutorials\n3. Free Bot Script\n\n\n> click the buttons to see me
-  `.trim(), igfg, null, [['OWNER HELP', '.mrcs'],['GET TEXT', '.repo']] , m, { mentions: [m.sender] })
-    m.react('🤫')
+  ) {
+    this.sendButton(
+      m.chat, 
+      `*WELCOME IT'S BOT JUST REPLYING*
+      Morning or Evening @${m.sender.split('@')[0]}
+      I May Be Offline Or May Be Slow To Respond You
+      
+      *What We Offer*
+      1. Pure Love
+      2. Bot Deployment Tutorials
+      3. Free Bot Script
+      
+      > click the buttons to see more`.trim(),
+      igfg,
+      null, 
+      [['OWNER HELP', '.mrcs'], ['GET TEXT', '.repo']], 
+      m,
+      { mentions: [m.sender] }
+    );
+    m.react('🤩');
   }
-
-  return !0
+  return !0;
 }
