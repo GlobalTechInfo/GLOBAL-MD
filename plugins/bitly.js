@@ -1,4 +1,4 @@
-import { bitly } from '@shizodevs/wabotmodule';
+/*import { bitly } from '@shizodevs/wabotmodule';
 
 let handler = async (m, { conn, args }) => {
   try {
@@ -22,3 +22,4 @@ handler.tags = ['tools'];
 handler.command = /^(shortlink|bitly)$/i;
 
 export default handler;
+*/
