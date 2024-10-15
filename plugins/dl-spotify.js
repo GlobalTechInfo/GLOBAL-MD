@@ -1,23 +1,47 @@
-import Scraper from "@SumiFX/Scraper"
+import fetch from 'node-fetch'
+import displayLoadingScreen from '../lib/loading.js'
+let handler = async (m, { conn, text }) => {
+  if (!text) {
+    console.log('No song name provided.')
+    throw `*Please enter a song name*`
+  }
+  m.react('🎶')
+  //await displayLoadingScreen(conn, m.chat)
+  let pp = 'https://wallpapercave.com/wp/wp7932387.jpg'
+  const query = encodeURIComponent(text)
+  let res = `https://api.guruapi.tech/spotifysearch?query=${query}`
+  let spurl = await fetch(res)
+  spurl = await spurl.json()
+  let dlres = await fetch(`https://api.guruapi.tech/spotifydl?url=${spurl.data[0].url}`)
+  dlres = await dlres.json()
+  let sturl  = dlres.data.url
 
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) return m.reply('🍭 Enter the name of a Spotify track.\n\n`Example:`\n' + `> *${usedPrefix + command}* Gemini Aaliyah - If Only`)
+  let doc = {
+    audio: {
+      url: sturl,
+    },
+    mimetype: 'audio/mpeg',
+    ptt: true,
+    waveform: [100, 0, 100, 0, 100, 0, 100],
+    fileName: 'Guru.mp3',
 
-let user = global.db.data.users[m.sender]
-try {
-let { title, artist, album, published, thumbnail, dl_url } = await Scraper.spotify(text)
-let txt = `╭─⬣「 *Spotify Download* 」⬣\n`
-    txt += `│  ≡◦ *🍭 Name ∙* ${title}\n`
-    txt += `│  ≡◦ *🪴 Artist ∙* ${artist}\n`
-    txt += `│  ≡◦ *📚 Album ∙* ${album}\n`
-    txt += `│  ≡◦ *📅 Publish ∙* ${published}\n`
-    txt += `╰─⬣`
-await conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', txt, m)
-await conn.sendFile(m.chat, dl_url, title + '.mp3', `*🍭 Title ∙* ${title}\n*🪴 Artist ∙* ${artist}`, m, false, { mimetype: 'audio/mpeg', asDocument: user.useDocument })
-} catch {
-}}
-handler.help = ['spotify <búsqueda>']
+    contextInfo: {
+      mentionedJid: [m.sender],
+      externalAdReply: {
+        title: '↺ |◁   II   ▷|   ♡',
+        body: `Now playing: ${text}`,
+        thumbnailUrl: dlres.data.thumbnail,
+        sourceUrl: null,
+        mediaType: 1,
+        renderLargerThumbnail: false,
+      },
+    },
+  }
+
+  await conn.sendMessage(m.chat, doc, { quoted: m })
+}
+handler.help = ['spotify']
 handler.tags = ['downloader']
-handler.command = ['spotify']
-handler.register = true 
+handler.command = /^(spotify|song)$/i
+
 export default handler
