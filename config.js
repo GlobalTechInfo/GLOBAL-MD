@@ -17,7 +17,7 @@ global.owner = ownerlist.map((owner, i) => ({
 
 console.log(global.owner);
 
-global.botNumber = '923051391007'; // Put your number here for pairing directly
+global.botNumber = '919339344963'; // Put your number here for pairing directly
 global.mods = ['923444844060'];
 global.prems = ['923444844060'];
 global.allowed = ['923444844060'];
