@@ -35,7 +35,7 @@ const { exec } = require('child_process');
 
 const { Boom } = require('@hapi/boom');
 
-
+const PHONENUMBER_MCC = require('./lib/phone');
 
 const NodeCache = require('node-cache');
 
@@ -45,7 +45,7 @@ const PhoneNumber = require('awesome-phonenumber');
 
 
 
-const { default: WAConnection, useMultiFileAuthState, Browsers, DisconnectReason, makeInMemoryStore, makeCacheableSignalKeyStore, fetchLatestWaWebVersion, proto, PHONENUMBER_MCC, getAggregateVotesInPollMessage } = require('baileys-pro');
+const { default: WAConnection, useMultiFileAuthState, Browsers, DisconnectReason, makeInMemoryStore, makeCacheableSignalKeyStore, fetchLatestWaWebVersion, proto, getAggregateVotesInPollMessage } = require('baileys-pro');
 
 
 
