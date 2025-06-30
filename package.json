@@ -20,7 +20,7 @@
     "@ibaraki-douji/pixivts": "^2.4.1",
     "@vitalets/google-translate-api": "^9.2.0",
     "aptoide-scraper": "^1.0.1",
-    "api-qasim": "^3.25",
+    "api-qasim": "^3.2.5",
     "awesome-phonenumber": "^4.4.0",
     "axios": "^0.30.0",
     "brainly-scraper": "^1.0.3",
