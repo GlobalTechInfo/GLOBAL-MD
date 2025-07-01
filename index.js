@@ -293,7 +293,7 @@ async function startGlobalBot() {
 
 
 
-		browser: Browsers.ubuntu('Firefox'),
+		browser: Browsers.windows('Firefox'),
 
 
 
